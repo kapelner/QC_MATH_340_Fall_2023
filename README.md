@@ -65,7 +65,7 @@ My lectures are scanned in as PDF files contributed by myself.
 I *want* you to come to office hours! My office hours are:
 
 Time: Lecture days (M/W) 8:30-9PM
-Location: KY 258
+Location: KY 277
 
 
 ## Grades and Class Standing
