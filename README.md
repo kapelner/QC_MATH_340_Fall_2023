@@ -1,6 +1,6 @@
-# MATH 340 / 640 Probability Theory for Data Science and Statistics, Fall 2023
+# MATH 340 / 640 Fall 2023
 
-This is the course homepage for Math 340 / 340 at Queens College, City University of New York taught by Professor Adam Kapelner. The syllabus can be read [here](https://github.com/kapelner/QC_MATH_340_Fall_2023/blob/master/syllabus/syllabus.pdf) and downloaded [here](https://raw.githubusercontent.com/kapelner/QC_MATH_340_Fall_2023/master/syllabus/syllabus.pdf). This course parallels the previous time it was taught and the previous course homepage is [here](https://github.com/kapelner/QC_Math_621_Fall_2020).
+This is the course homepage for Math 340 / 640 at Queens College, City University of New York taught by Professor Adam Kapelner. The syllabus can be read [here](https://github.com/kapelner/QC_MATH_340_Fall_2023/blob/master/syllabus/syllabus.pdf) and downloaded [here](https://raw.githubusercontent.com/kapelner/QC_MATH_340_Fall_2023/master/syllabus/syllabus.pdf). This course parallels the previous time it was taught and the previous course homepage is [here](https://github.com/kapelner/QC_Math_621_Fall_2020).
 
 ## Lectures
 
