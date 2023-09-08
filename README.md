@@ -4,32 +4,32 @@ This is the course homepage for Math 340 / 640 at Queens College, City Universit
 
 ## Lectures
 
-My lectures are scanned in as PDF files contributed by myself.
+My lecture notes are scanned in as PDF files contributed by myself.
 
 <!--
-* Lecture 23 [(Prof)](https://github.com/kapelner/QC_MATH_340_Fall_2023/blob/main/lectures/lec23.pdf)
-* Lecture 22 [(Prof)](https://github.com/kapelner/QC_MATH_340_Fall_2023/blob/main/lectures/lec22.pdf)
-* Lecture 21 [(Prof)](https://github.com/kapelner/QC_MATH_340_Fall_2023/blob/main/lectures/lec21.pdf)
-* Lecture 20 [(Prof)](https://github.com/kapelner/QC_MATH_340_Fall_2023/blob/main/lectures/lec20.pdf)
-* Lecture 19 [(Prof)](https://github.com/kapelner/QC_MATH_340_Fall_2023/blob/main/lectures/lec19.pdf)
-* Lecture 18 [(Prof)](https://github.com/kapelner/QC_MATH_340_Fall_2023/blob/main/lectures/lec18.pdf)
-* Lecture 17 [(Prof)](https://github.com/kapelner/QC_MATH_340_Fall_2023/blob/main/lectures/lec17.pdf)
-* Lecture 16 [(Prof)](https://github.com/kapelner/QC_MATH_340_Fall_2023/blob/main/lectures/lec16.pdf)
-* Lecture 15 [(Prof)](https://github.com/kapelner/QC_MATH_340_Fall_2023/blob/main/lectures/lec15.pdf)
-* Lecture 14 [(Prof)](https://github.com/kapelner/QC_MATH_340_Fall_2023/blob/main/lectures/lec14.pdf)
-* Lecture 13 [(Prof)](https://github.com/kapelner/QC_MATH_340_Fall_2023/blob/main/lectures/lec13.pdf)
-* Lecture 12 [(Prof)](https://github.com/kapelner/QC_MATH_340_Fall_2023/blob/main/lectures/lec12.pdf)
-* Lecture 11 [(Prof)](https://github.com/kapelner/QC_MATH_340_Fall_2023/blob/main/lectures/lec11.pdf)
-* Lecture 10 [(Prof)](https://github.com/kapelner/QC_MATH_340_Fall_2023/blob/main/lectures/lec10.pdf)
-* Lecture 9 [(Prof)](https://github.com/kapelner/QC_MATH_340_Fall_2023/blob/main/lectures/lec09.pdf)
-* Lecture 8 [(Prof)](https://github.com/kapelner/QC_MATH_340_Fall_2023/blob/main/lectures/lec08.pdf)
-* Lecture 7 [(Prof)](https://github.com/kapelner/QC_MATH_340_Fall_2023/blob/main/lectures/lec07.pdf)
-* Lecture 6 [(Prof)](https://github.com/kapelner/QC_MATH_340_Fall_2023/blob/main/lectures/lec06.pdf)
-* Lecture 5 [(Prof)](https://github.com/kapelner/QC_MATH_340_Fall_2023/blob/main/lectures/lec05.pdf) 
-* Lecture 4 [(Prof)](https://github.com/kapelner/QC_MATH_340_Fall_2023/blob/main/lectures/lec04.pdf) --> 
-* Lecture 3 [(Prof)](https://github.com/kapelner/QC_MATH_340_Fall_2023/blob/main/lectures/lec03.pdf) [(audio)](https://github.com/kapelner/QC_MATH_340_Fall_2023/blob/main/lectures/lec03audio.m4a)
-* Lecture 2 [(Prof)](https://github.com/kapelner/QC_MATH_340_Fall_2023/blob/main/lectures/lec02.pdf)
-* Lecture 1 [(Prof)](https://github.com/kapelner/QC_MATH_340_Fall_2023/blob/main/lectures/lec01.pdf)
+* Lecture 23 [(notes)](https://github.com/kapelner/QC_MATH_340_Fall_2023/blob/main/lectures/lec23.pdf)
+* Lecture 22 [(notes)](https://github.com/kapelner/QC_MATH_340_Fall_2023/blob/main/lectures/lec22.pdf)
+* Lecture 21 [(notes)](https://github.com/kapelner/QC_MATH_340_Fall_2023/blob/main/lectures/lec21.pdf)
+* Lecture 20 [(notes)](https://github.com/kapelner/QC_MATH_340_Fall_2023/blob/main/lectures/lec20.pdf)
+* Lecture 19 [(notes)](https://github.com/kapelner/QC_MATH_340_Fall_2023/blob/main/lectures/lec19.pdf)
+* Lecture 18 [(notes)](https://github.com/kapelner/QC_MATH_340_Fall_2023/blob/main/lectures/lec18.pdf)
+* Lecture 17 [(notes)](https://github.com/kapelner/QC_MATH_340_Fall_2023/blob/main/lectures/lec17.pdf)
+* Lecture 16 [(notes)](https://github.com/kapelner/QC_MATH_340_Fall_2023/blob/main/lectures/lec16.pdf)
+* Lecture 15 [(notes)](https://github.com/kapelner/QC_MATH_340_Fall_2023/blob/main/lectures/lec15.pdf)
+* Lecture 14 [(notes)](https://github.com/kapelner/QC_MATH_340_Fall_2023/blob/main/lectures/lec14.pdf)
+* Lecture 13 [(notes)](https://github.com/kapelner/QC_MATH_340_Fall_2023/blob/main/lectures/lec13.pdf)
+* Lecture 12 [(notes)](https://github.com/kapelner/QC_MATH_340_Fall_2023/blob/main/lectures/lec12.pdf)
+* Lecture 11 [(notes)](https://github.com/kapelner/QC_MATH_340_Fall_2023/blob/main/lectures/lec11.pdf)
+* Lecture 10 [(notes)](https://github.com/kapelner/QC_MATH_340_Fall_2023/blob/main/lectures/lec10.pdf)
+* Lecture 9 [(notes)](https://github.com/kapelner/QC_MATH_340_Fall_2023/blob/main/lectures/lec09.pdf)
+* Lecture 8 [(notes)](https://github.com/kapelner/QC_MATH_340_Fall_2023/blob/main/lectures/lec08.pdf)
+* Lecture 7 [(notes)](https://github.com/kapelner/QC_MATH_340_Fall_2023/blob/main/lectures/lec07.pdf)
+* Lecture 6 [(notes)](https://github.com/kapelner/QC_MATH_340_Fall_2023/blob/main/lectures/lec06.pdf)
+* Lecture 5 [(notes)](https://github.com/kapelner/QC_MATH_340_Fall_2023/blob/main/lectures/lec05.pdf) 
+* Lecture 4 [(notes)](https://github.com/kapelner/QC_MATH_340_Fall_2023/blob/main/lectures/lec04.pdf) --> 
+* Lecture 3 [(notes)](https://github.com/kapelner/QC_MATH_340_Fall_2023/blob/main/lectures/lec03.pdf) [(audio)](https://github.com/kapelner/QC_MATH_340_Fall_2023/blob/main/lectures/lec03audio.m4a)
+* Lecture 2 [(notes)](https://github.com/kapelner/QC_MATH_340_Fall_2023/blob/main/lectures/lec02.pdf)
+* Lecture 1 [(notes)](https://github.com/kapelner/QC_MATH_340_Fall_2023/blob/main/lectures/lec01.pdf)
 
 
 ## Homeworks
@@ -54,11 +54,11 @@ My lectures are scanned in as PDF files contributed by myself.
 
 ## Practice Exams
 
-* Midterm I [(exam 1)](https://github.com/kapelner/QC_Math_621_Fall_2020/blob/master/exams/midterm1/midterm1.pdf) [(solutions 1)](https://github.com/kapelner/QC_Math_621_Fall_2020/blob/master/exams/midterm1/midterm1_solutions.pdf) [(exam 2)](https://github.com/kapelner/QC_Math_621_Fall_2017/blob/master/exams/midterm1/midterm1.pdf) [(solutions 2)](https://github.com/kapelner/QC_Math_621_Fall_2017/blob/master/exams/midterm1/midterm1_solutions.pdf) [(exam 3)](https://github.com/kapelner/QC_Math_621_Fall_2019/blob/master/exams/midterm1/midterm1.pdf) [(solutions 3)](https://github.com/kapelner/QC_Math_621_Fall_2019/blob/master/exams/midterm1/midterm1_solutions.pdf) [(exam 4)](https://github.com/kapelner/QC_Math_621_Fall_2021/blob/master/exams/midterm1/midterm1.pdf) [(solutions 4)](https://github.com/kapelner/QC_Math_621_Fall_2021/blob/master/exams/midterm1/midterm1_solutions.pdf)
+* Midterm I [(exam 1)](https://github.com/kapelner/QC_Math_621_Fall_2020/blob/master/exams/midterm1/midterm1.pdf) [(solutions 1)](https://github.com/kapelner/QC_Math_621_Fall_2020/blob/master/exams/midterm1/midterm1_solutions.pdf) [(exam 2)](https://github.com/kapelner/QC_Math_621_Fall_2017/blob/master/exams/midterm1/midterm1.pdf) [(solutions 2)](https://github.com/kapelner/QC_Math_621_Fall_2017/blob/master/exams/midterm1/midterm1_solutions.pdf) [(exam 3)](https://github.com/kapelner/QC_Math_621_Fall_2019/blob/master/exams/midterm1/midterm1.pdf) [(solutions 3)](https://github.com/kapelner/QC_Math_621_Fall_2019/blob/master/exams/midterm1/midterm1_solutions.pdf) [(exam 4)](https://github.com/kapelner/QC_Math_621_Fall_2020/blob/master/exams/midterm1/midterm1.pdf) [(solutions 4)](https://github.com/kapelner/QC_Math_621_Fall_2020/blob/master/exams/midterm1/midterm1_solutions.pdf)
 
-* Midterm II [(exam 1)](https://github.com/kapelner/QC_Math_621_Fall_2020/blob/master/exams/midterm2/midterm2.pdf) [(solutions 1)](https://github.com/kapelner/QC_Math_621_Fall_2020/blob/master/exams/midterm2/midterm2_solutions.pdf) [(exam 2)](https://github.com/kapelner/QC_Math_621_Fall_2017/blob/master/exams/midterm2/midterm2.pdf) [(solutions 2)](https://github.com/kapelner/QC_Math_621_Fall_2017/blob/master/exams/midterm2/midterm2_solutions.pdf) [(exam 3)](https://github.com/kapelner/QC_Math_621_Fall_2019/blob/master/exams/midterm2/midterm2.pdf) [(solutions 3)](https://github.com/kapelner/QC_Math_621_Fall_2019/blob/master/exams/midterm2/midterm2_solutions.pdf) [(exam 4)](https://github.com/kapelner/QC_Math_621_Fall_2021/blob/master/exams/midterm2/midterm2.pdf) [(solutions 4)](https://github.com/kapelner/QC_Math_621_Fall_2021/blob/master/exams/midterm2/midterm2_solutions.pdf)
+* Midterm II [(exam 1)](https://github.com/kapelner/QC_Math_621_Fall_2020/blob/master/exams/midterm2/midterm2.pdf) [(solutions 1)](https://github.com/kapelner/QC_Math_621_Fall_2020/blob/master/exams/midterm2/midterm2_solutions.pdf) [(exam 2)](https://github.com/kapelner/QC_Math_621_Fall_2017/blob/master/exams/midterm2/midterm2.pdf) [(solutions 2)](https://github.com/kapelner/QC_Math_621_Fall_2017/blob/master/exams/midterm2/midterm2_solutions.pdf) [(exam 3)](https://github.com/kapelner/QC_Math_621_Fall_2019/blob/master/exams/midterm2/midterm2.pdf) [(solutions 3)](https://github.com/kapelner/QC_Math_621_Fall_2019/blob/master/exams/midterm2/midterm2_solutions.pdf) [(exam 4)](https://github.com/kapelner/QC_Math_621_Fall_2020/blob/master/exams/midterm2/midterm2.pdf) [(solutions 4)](https://github.com/kapelner/QC_Math_621_Fall_2020/blob/master/exams/midterm2/midterm2_solutions.pdf)
 
-* Final [(exam 1)](https://github.com/kapelner/QC_Math_621_Fall_2020/blob/master/exams/final/final.pdf) [(solutions 1)](https://github.com/kapelner/QC_Math_621_Fall_2020/blob/master/exams/final/final_solutions.pdf) [(exam 2)](https://github.com/kapelner/QC_Math_621_Fall_2017/blob/master/exams/final/final.pdf) [(solutions 2)](https://github.com/kapelner/QC_Math_621_Fall_2017/blob/master/exams/final/final_solutions.pdf) [(exam 3)](https://github.com/kapelner/QC_Math_621_Fall_2019/blob/master/exams/final/final.pdf) [(solutions 3)](https://github.com/kapelner/QC_Math_621_Fall_2019/blob/master/exams/final/final_solutions.pdf) [(exam 4)](https://github.com/kapelner/QC_Math_621_Fall_2021/blob/master/exams/final/final.pdf) [(solutions 4)](https://github.com/kapelner/QC_Math_621_Fall_2021/blob/master/exams/final/final_solutions.pdf)
+* Final [(exam 1)](https://github.com/kapelner/QC_Math_621_Fall_2020/blob/master/exams/final/final.pdf) [(solutions 1)](https://github.com/kapelner/QC_Math_621_Fall_2020/blob/master/exams/final/final_solutions.pdf) [(exam 2)](https://github.com/kapelner/QC_Math_621_Fall_2017/blob/master/exams/final/final.pdf) [(solutions 2)](https://github.com/kapelner/QC_Math_621_Fall_2017/blob/master/exams/final/final_solutions.pdf) [(exam 3)](https://github.com/kapelner/QC_Math_621_Fall_2019/blob/master/exams/final/final.pdf) [(solutions 3)](https://github.com/kapelner/QC_Math_621_Fall_2019/blob/master/exams/final/final_solutions.pdf) [(exam 4)](https://github.com/kapelner/QC_Math_621_Fall_2020/blob/master/exams/final/final.pdf) [(solutions 4)](https://github.com/kapelner/QC_Math_621_Fall_2020/blob/master/exams/final/final_solutions.pdf)
 
 ## Office Hours
 
