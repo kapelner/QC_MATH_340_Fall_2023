@@ -25,9 +25,9 @@ My lectures are scanned in as PDF files contributed by myself.
 * Lecture 8 [(Prof)](https://github.com/kapelner/QC_MATH_340_Fall_2023/blob/main/lectures/lec08kap.pdf)
 * Lecture 7 [(Prof)](https://github.com/kapelner/QC_MATH_340_Fall_2023/blob/main/lectures/lec07kap.pdf)
 * Lecture 6 [(Prof)](https://github.com/kapelner/QC_MATH_340_Fall_2023/blob/main/lectures/lec06kap.pdf)
-* Lecture 5 [(Prof)](https://github.com/kapelner/QC_MATH_340_Fall_2023/blob/main/lectures/lec05kap.pdf)
-* Lecture 4 [(Prof)](https://github.com/kapelner/QC_MATH_340_Fall_2023/blob/main/lectures/lec04kap.pdf) [(Prof)](https://github.com/kapelner/QC_MATH_340_Fall_2023/blob/main/lectures/lec03kap.pdf) 
-* Lecture 3 [(audio)](https://github.com/kapelner/QC_MATH_340_Fall_2023/blob/main/lectures/lec03audio.mp3) --> 
+* Lecture 5 [(Prof)](https://github.com/kapelner/QC_MATH_340_Fall_2023/blob/main/lectures/lec05kap.pdf) [(audio)](https://github.com/kapelner/QC_MATH_340_Fall_2023/blob/main/lectures/lec03audio.mp3)
+* Lecture 4 [(Prof)](https://github.com/kapelner/QC_MATH_340_Fall_2023/blob/main/lectures/lec04kap.pdf) --> 
+* Lecture 3 [(Prof)](https://github.com/kapelner/QC_MATH_340_Fall_2023/blob/main/lectures/lec03kap.pdf) 
 * Lecture 2 [(Prof)](https://github.com/kapelner/QC_MATH_340_Fall_2023/blob/main/lectures/lec02kap.pdf)
 * Lecture 1 [(Prof)](https://github.com/kapelner/QC_MATH_340_Fall_2023/blob/main/lectures/lec01kap.pdf)
 
