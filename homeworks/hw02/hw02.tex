@@ -1,0 +1,378 @@
+\documentclass[12pt]{article}
+
+\include{preamble}
+
+\newtoggle{professormode}
+\toggletrue{professormode} %STUDENTS: DELETE or COMMENT this line
+
+
+
+\title{MATH 340/640 Fall \the\year~ Homework \#2}
+
+\author{Professor Adam Kapelner} %STUDENTS: write your name here
+
+\iftoggle{professormode}{
+\date{Due by email 11:59PM September 21, \the\year \\ \vspace{0.5cm} \small (this document last updated \today ~at \currenttime)}
+}
+
+\renewcommand{\abstractname}{Instructions and Philosophy}
+
+\begin{document}
+\maketitle
+
+\iftoggle{professormode}{
+\begin{abstract}
+The path to success in this class is to do many problems. Unlike other courses, exclusively doing reading(s) will not help. Coming to lecture is akin to watching workout videos; thinking about and solving problems on your own is the actual ``working out.''  Feel free to \qu{work out} with others; \textbf{I want you to work on this in groups.}
+
+Reading is still \textit{required}. For this homework set, review Math 241 concerning random variables, support, parameter space, PMF's, CDF's, bernoulli, binomial, geometric, negative binomial, exponential, Erlang, normal. Then read on your own about characteristic functions, the law of large numbers (LLN) and the central limit theorem (CLT).
+
+The problems below are color coded: \ingreen{green} problems are considered \textit{easy} and marked \qu{[easy]}; \inorange{yellow} problems are considered \textit{intermediate} and marked \qu{[harder]}, \inred{red} problems are considered \textit{difficult} and marked \qu{[difficult]} and \inpurple{purple} problems are extra credit. The \textit{easy} problems are intended to be ``giveaways'' if you went to class. Do as much as you can of the others; I expect you to at least attempt the \textit{difficult} problems. \qu{[MA]} are for those registered for 621 and extra credit otherwise.
+
+This homework is worth 100 points but the point distribution will not be determined until after the due date. See syllabus for the policy on late homework.
+
+Up to 5 points are given as a bonus if the homework is typed using \LaTeX. Links to instaling \LaTeX~and program for compiling \LaTeX~is found on the syllabus. You are encouraged to use \url{overleaf.com}. If you are handing in homework this way, read the comments in the code; there are two lines to comment out and you should replace my name with yours and write your section. The easiest way to use overleaf is to copy the raw text from hwxx.tex and preamble.tex into two new overleaf tex files with the same name. If you are asked to make drawings, you can take a picture of your handwritten drawing and insert them as figures or leave space using the \qu{$\backslash$vspace} command and draw them in after printing or attach them stapled.
+
+The document is available with spaces for you to write your answers. If not using \LaTeX, print this document and write in your answers. I do not accept homeworks which are \textit{not} on this printout. Keep this first page printed for your records.
+
+\end{abstract}
+
+\thispagestyle{empty}
+\vspace{1cm}
+NAME: \line(1,0){380}
+\clearpage
+}
+
+
+
+\problem{These exercises introduce probabilities of conditional subsets of the supports of multiple r.v.'s.}
+
+
+\begin{enumerate}
+
+\hardsubproblem{Let $X \sim \geometric{p_x}$ independent of $Y \sim \geometric{p_y}$. Find $\prob{X > Y}$ using the method we did in class.}\spc{10}
+
+
+\easysubproblem{[MA] Prove this a different way by finding $\prob{X = Y}$ and then using the law of total probability.}\spc{10}
+
+\intermediatesubproblem{As both $p_x$ and $p_y$ are reduced to zero, but $r = \frac{p_x}{p_y}$, what is the asymptotic probability you found in (a)?}\spc{10}
+
+\end{enumerate}
+
+
+
+\problem{These exercises will give you more practice with indicator functions.}
+
+
+\begin{enumerate}
+
+\easysubproblem{Resolve as best as possible: $\sum_{x \in \integers} \indic{x \in \bracks{0, c}}$ where $c \in \naturals_0$.}\spc{1}
+
+\easysubproblem{Resolve as best as possible: $\sum_{x \in \braces{0, 1, \ldots, d}} \indic{x \in \bracks{0, c}}$ where $c, d \in \naturals_0$.}\spc{1}
+
+
+\easysubproblem{Resolve as best as possible: $\int_{\reals} \indic{x \in \bracks{0, c}}\mathrm{d}x$ where $c \in \reals$.}\spc{1}
+
+\easysubproblem{Resolve as best as possible: $\int_{-\infty}^d \indic{x \in \bracks{0, c}}\mathrm{d}x$ where $c,d \in \reals$.}\spc{1}
+
+\easysubproblem{Resolve as best as possible: $\int_{d}^{d+1} \indic{x \in \bracks{0, c}}\mathrm{d}x$ where $c,d \in \reals$.}\spc{1}
+
+\intermediatesubproblem{Resolve as best as possible: $\int_{d}^{d+1} \indic{x \in \bracks{c, c + 1}}\mathrm{d}x$ where $c,d \in \reals$.}\spc{1}
+
+\end{enumerate}
+
+
+
+\problem{This question reviews the Exponential distribution and introduces the Erlang distribution.}
+
+\begin{enumerate}
+
+\intermediatesubproblem{Let $X \sim \geometric{p}$. You can show that $\expe{X} = \frac{1-p}{p}$. Find $\var{X}$ from the definition of variance.}\spc{9}
+
+
+\easysubproblem{Illustrate the PDF and CDF of $X \sim \exponential{\lambda}$. Mark critical points on the y-axes.}\spc{4}
+
+\easysubproblem{Derive the $\exponential{\lambda}$ rv from the $X_n$ Geometric r.v. with $n$ experiments compacted per time period (identically to how we did in class). In the process, write the CDF, PMF and PDF of the Exponential rv. Make sure the PMF and PDF are valid $\forall x \in \reals$. The CDF you can leave in \qu{old} style.}\spc{9}
+
+
+
+\hardsubproblem{Let $X_1, \ldots, X_k \iid \exponential{\lambda}$ and let $T = X_1 + \ldots + X_k$. Using induction, show that $T \sim \erlang{k}{\lambda}$ by finding its PDF.}\spc{10}
+
+
+
+\easysubproblem{Find the expectation of $T \sim \erlang{k}{\lambda}$. Use the linearity rules!}\spc{1}
+
+\easysubproblem{Find the variance of $T \sim \erlang{k}{\lambda}$. Use the linearity rules!}\spc{3}
+
+\easysubproblem{Why is the geometric distribution analogous to the exponential distribution? Why is the negative binomial distribution analogous to the erlang distribution?}\spc{3}
+
+\easysubproblem{If the length of time (in minutes) of a phone call is distributed $\exponential{0.5}$ and all phone call lengths are $\iid$, find an expression for the probability that the total sum time of 37 phone calls lasts longer than 17 minutes.}\spc{2}
+
+
+\hardsubproblem{Show that for any exponential r.v. with rate parameter $\lambda$ the distribution is \qu{memoryless} meaning that for any $c$, a positive constant, $\cprob{X > x + c}{X > c} = \prob{X > x}$.}\spc{8}
+
+\end{enumerate}
+
+
+\problem{This problem introduces characteristic functions (ch.f.'s)!}
+
+\begin{enumerate}
+
+\easysubproblem{Prove that $\abss{e^{i \theta}} = 1$ for all $\theta$.}\spc{3}
+
+\easysubproblem{Give one example function $g$ where you show conclusively that $g \notin L^1$.}\spc{2}
+
+\easysubproblem{Prove that all PDF's are $\in L^1$.}\spc{2}
+
+\easysubproblem{List ch.f. properties P0-P7 below without proofs.}\spc{10}
+
+
+\intermediatesubproblem{Use P4 to compute the variance of rv $X$ using only $\phi_X(t)$ and its derivative(s).}\spc{4}
+
+\hardsubproblem{For continuous rv $X \sim f_X(x)$, given the Fourier inversion theorem, if $\phi_X(t) \in L^1$ then prove P6 below:
+
+\beqn
+f_X(x) = \oneover{2\pi} \int_\reals e^{itx} \phi_X(t) dt.
+\eeqn
+}\spc{6}
+
+
+
+%Hint: use the work found in \href{https://github.com/kapelner/QC_Math_621_Fall_2017/blob/master/lectures/lec14kap.pdf}{my lecture from 2017}.}\spc{2.5}
+
+\easysubproblem{Find the ch.f. of $X \sim \bernoulli{p}$.}\spc{2.5}
+
+\easysubproblem{Find the ch.f. of $T \sim \binomial{n}{p}$. Hint: use the binomial theorem.}\spc{4}
+
+\easysubproblem{Using ch.f.'s, find $\expe{T}$.}\spc{4}
+
+\easysubproblem{Using ch.f.'s, find $\var{T}$.}\spc{4}
+
+\easysubproblem{Using ch.f.'s, show that if $\Xoneton \iid \bernoulli{p}$, then $T = X_1 + \ldots + X_n \sim \binomial{n}{p}$.}\spc{4}
+
+
+\intermediatesubproblem{Using ch.f.'s, show that if $\Xoneton \iid \binomial{m}{p}$, then $T = X_1 + \ldots + X_n \sim \binomial{nm}{p}$.}\spc{6}
+%\easysubproblem{Define the mgf and prove properties 0, 2, 3 and 4 for mgf's. (You cannot prove property 1 without advanced math).}\spc{3}
+
+
+\intermediatesubproblem{Find the ch.f. of $X_n$, the Geometric rv whose probability of success is $\lambda / n$ where there are $n$ experiments per unit change in $x$ (this is the rv we used to prove the exponential rv in class). Hint: use the reindexing trick.}\spc{5}
+
+
+\intermediatesubproblem{[MA] Prove the ch.f. from the previous problem limits to the ch.f. for $\exponential{\lambda}$. This really is just an elaborate calculus exercise. The point being is that using ch.f's is not always easier to derive rv's than the direct method using PMF's and PDF's.}\spc{9}
+
+
+\intermediatesubproblem{Let $X \sim \uniform{a}{b}$. Find $\phi_X(t)$.}\spc{6}
+
+\end{enumerate}
+
+\problem{The very weak law of large numbers (LLN) and the central limit theorem (CLT).}
+
+\begin{enumerate}
+
+\easysubproblem{State the setup / assumptions of the very weak LLN.}\spc{1}
+
+\easysubproblem{Prove the very weak LLN (copy from the notes if you get stuck).}\spc{15}
+
+\intermediatesubproblem{What is the main implication of the LLN? Write in English.}\spc{1}
+
+\intermediatesubproblem{State the additonal assumption(s) of the CLT in addition to assumptions that were needed to prove the LLN.}\spc{1}
+
+\easysubproblem{Prove the CLT i.e. prove the limiting ch.f. of the standardized average rv is $e^{-t^2/2}$, the ch.f. for $Z \sim \stdnormnot$.}\spc{16}
+
+\intermediatesubproblem{What is the main implication of the CLT? Write in English.}\spc{1}
+
+\hardsubproblem{[MA] Let $X_1, X_2, \ldots, X_n \iid$ some distribution with mean $\mu_X$ and variance $\sigsq_X < \infty$ and let $Y_1, Y_2, \ldots, Y_n \iid$ some distribution with mean $\mu_Y$ and variance $\sigsq_Y < \infty$ which are independent of the $X_i$'s. Prove the following central limit theorem corollary:
+
+\beqn
+\frac{(\Xbar - \Ybar) - (\mu_X - \mu_Y)}{\sqrt{\overn{\sigsq_X} + \overn{\sigsq_Y}}} \convd \stdnormnot.
+\eeqn
+
+We need this fact to do two-sample testing in statistics. This looks harder than it is. Trace through the proof in (b), use algebra to simplify expressions and make substitutions in the appropriate places.}\spc{20}
+
+
+\easysubproblem{Let $Z \sim \stdnormnot$. Let $X = \mu + \sigma Z \sim \normnot{\mu}{\sigsq}$. Find $\phi_X(t)$.}\spc{2}
+
+\easysubproblem{What is $f_X(x)$? Copy from class notes.}\spc{1}
+
+
+\intermediatesubproblem{[MA]  Find the PDF of $X$ using P6, inversion of its ch.f.}\spc{20}
+
+\end{enumerate}
+
+
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+%\problem{These exercises will introduce the Multinomial distribution.}
+%
+%
+%\begin{enumerate}
+%
+%\easysubproblem{If $\X \sim \multinomial{n}{\p}$ where $\dime{\X} = k$, what is the parameter space for both $n$ and $\p$?}\spc{2}
+%
+%\easysubproblem{If $\X \sim \multinomial{n}{\p}$ where $\dime{\X} = k$, what is the $\support{\X}$?}\spc{2}
+%
+%\easysubproblem{If $\X \sim \multinomial{n}{\p}$ where $\dime{\X} = k$, what is $\dime{\p}$?}\spc{-0.5}
+%
+%\easysubproblem{If $\X \sim \multinomial{n}{\p}$ where $\dime{\X} = 2$, express $p_2$ as a function of $p_1$.}\spc{2}
+%
+%\easysubproblem{If $\X \sim \multinomial{n}{\p}$ where $\dime{\X} = 2$, how are both $X_1$ and $X_2$ distributed?}\spc{1}
+%
+%\easysubproblem{If $\X \sim \multinomial{n}{\p}$ and $n= 10$ and $\dime{\X} = 7$ as a column vector, give an example value of $\x$, a realization of the r.v. $\X$.}\spc{2}
+%
+%\easysubproblem{If $\X \sim \multinomial{9}{\bracks{0.1~0.2~0.7}^\top}$, find $\prob{\X = \bracks{3~2~4}^\top}$ to the nearest two decimal places.}\spc{2}
+%
+%
+%%\intermediatesubproblem{If $\X \sim \multinomial{n}{\p}$ and $n= 10$ and $\p = \bracks{0.2, 0.8}^\top$, find $\muvec := \expe{\X}$.}\spc{2}
+%
+%
+%\hardsubproblem{[MA] If $\X_1 \sim \multinomial{n}{\p}$ and independently $\X_2 \sim \multinomial{n}{\p}$ where $\dime{\X_1} = \dime{\X_2} = k$. Find the JMF of $\T_2 = \X_1 + \X_2$ from the definition of convolution. This looks harder than it is! First, use the definition of convolution and factor out the terms that are not a function of $x_1, \ldots, x_K$. Finally, use Theorem 1 in this paper: \href{http://www.lrecits.usthb.dz/1.3.pdf}{[click here]} for the summation.}\spc{9}
+%
+%\end{enumerate}
+
+
+
+%\easysubproblem{Prove the PMF of $X \sim \poisson{\lambda}$ using the limit as $n \rightarrow \infty$ and let $p = \overn{\lambda}$.}\spc{9}
+%
+%
+%\hardsubproblem{Let $X_1 \sim \poisson{\lambda_1}$ independent of $X_2 \sim \poisson{\lambda_2}$. Find the PMF of the sum of $T = X_1 + X_2$ using a convolution.}\spc{12}
+
+%\hardsubproblem{Let $X \sim \poisson{\lambda}$ independent of $Y \sim \poisson{\lambda}$. Find an expression for $\prob{X > Y}$ \emph{as best as you are able to answer}. Part of this exercise is identifying where you cannot go any further.}\spc{9}
+
+
+%\problem{We will get some practice with the simple transformation $Y = g(X) = -X$ for discrete r.v.'s.}
+%
+%
+%\begin{enumerate}
+%
+%\easysubproblem{If $X \sim \bernoulli{p}$, find the PMF of $Y = -X$. Make sure the PMF is valid $\forall y \in \reals$.}\spc{1}
+%
+%\easysubproblem{If $X \sim \negbin{r}{p}$, find the PMF of $Y = -X$. Make sure the PMF is valid $\forall y \in \reals$.}\spc{1}
+%
+%\intermediatesubproblem{If $\X \sim \multinomial{n}{\p}$, find the JMF of $\Y = -\X$. Make sure the JMF is valid $\forall \y \in \reals^K$.}\spc{1}
+%
+%\end{enumerate}
+%
+%\problem{We will now practice the conditional-on-total distributions.}
+%
+%\begin{enumerate}
+%
+%\hardsubproblem{Let $X_1, X_2 \iid \geometric{p}$ and $T = X_1 + X_2$. Find the PMF of $X_1~|~T = t$ and notate it using a brand name random variance e.g. binomial, poisson, etc. The answer may surprise you. Conditional probability is very weird!}\spc{7}
+%
+%
+%\intermediatesubproblem{[MA] Let $X_1, X_2 \iid \binomial{n}{p}$ and $T = X_1 + X_2$. Show that $X_1~|~T = t$ is hypergeometric. You can find information about this r.v. online. Note we did not / will not study the hypergeometric further and it will not be covered on any exams.}\spc{7}
+%\end{enumerate}
+%
+%\problem{We will now go over the Skellam distribution. In class we derived the PMF of $D = X_1 - X_2$ where $X_1, X_2 \iid \poisson{\lambda}$. This was first published in 1937. This was a special case of general Skellam distribution which is defined below:
+%
+%\beqn
+%D \sim \text{Skellam}(\lambda_1, \lambda_2) := e^{-(\lambda_1 + \lambda_2)} \tothepow{\frac{\lambda_1}{\lambda_2}}{d/2} I_{|d|}(2 \sqrt{\lambda_1\lambda_2})
+%\eeqn
+%
+%\noindent where $I_x(a)$ denotes the \href{https://en.wikipedia.org/wiki/Bessel_function\#Modified_Bessel_functions}{modified Bessel function of the first kind} defined as:
+%
+%\beqn
+%I_{\alpha}(\lambda) := \sum_{x = 0}^\infty \frac{\tothepow{\overtwo{\lambda}}{2x + \alpha}}{x! (x + \alpha)!}
+%\eeqn
+%
+%\noindent when $\alpha \in \naturals_0$.
+%}\vspace{0.5cm}
+%
+%\begin{enumerate}
+%
+%\easysubproblem{Show that for $\lambda_1 = \lambda_2$, we get the formula derived in class i.e. the special case of the Skellam derived in 1937.}\spc{1}
+%
+%
+%\intermediatesubproblem{[MA] If $D = X_1 - X_2$ where $X_1 \sim \poisson{\lambda_1}$ and $X_2 \sim \poisson{\lambda_2}$ where $X_1$ and $X_2$ are independent, show that $D \sim \text{Skellam}(\lambda_1, \lambda_2)$. You will be essentially redoing the proof published by John Gordon Skellam in 1946.}\spc{10}
+%
+%
+%\easysubproblem{The Yankees play the Mets. Assume the number of runs scored is Poisson with rate parameter $\lambda_Y = 7$ for the Yankees and rate parameter $\lambda_M = 5$ for the Mets. Assume the number of runs scored by the Yankees is independent of the number of runs scored by the Mets. What score difference is expected in this baseball game?}\spc{2}
+%
+%\easysubproblem{Find the probability the Mets beat the Yankees by 3. Leave in notation. Do not compute an actual number.}\spc{2}
+%
+%%\easysubproblem{[MA] Figure out a way to compute the probability in the previous question to two significant figures.}\spc{1}
+%
+%
+%\easysubproblem{Write an expression to compute the probability the Mets beat the Yankees. Leave in notation. Do not compute an actual number.}\spc{1}
+%
+%\end{enumerate}
+
+
+
+%\problem{We will now practice the conditional-on-total distributions.}
+%
+%\begin{enumerate}
+%
+%\hardsubproblem{Let $X_1, X_2 \iid \geometric{p}$ and $T = X_1 + X_2$. Find the PMF of $X_1~|~T = t$ and notate it using a brand name random variance e.g. binomial, poisson, etc. The answer may surprise you. Conditional probability is very weird!}\spc{7}
+%
+%
+%\intermediatesubproblem{[MA] Let $X_1, X_2 \iid \binomial{n}{p}$ and $T = X_1 + X_2$. Show that $X_1~|~T = t$ is hypergeometric. You can find information about this r.v. online. Note we did not / will not study the hypergeometric further and it will not be covered on any exams.}\spc{7}
+%\end{enumerate}
+
+
+%\problem{Introducing the king: the normal distribution $\mathcal{N}$ and his princes/sses: the lognormal distribution Log$\mathcal{N}$, chi-squared distribution $\chi^2_k$, Student's T distribution $T_k$ and Fisher-Snecodor's distribution $F_{k_1,k_2}$.}
+%
+%\begin{enumerate}
+%
+%\easysubproblem{Let $X_1 \sim \normnot{\mu_1}{\sigsq_1}$ independent of $X_2 \sim \normnot{\mu_2}{\sigsq_2}$. Prove $X_1 + X_2 \sim  \normnot{\mu_1 + \mu_2}{\sigsq_1 + \sigsq_2}$ using ch.f.'s.}\spc{5}
+%
+%\extracreditsubproblem{Let $X_1 \sim \normnot{\mu_1}{\sigsq_1}$ independent of $X_2 \sim \normnot{\mu_2}{\sigsq_2}$. Prove $X_1 + X_2 \sim  \normnot{\mu_1 + \mu_2}{\sigsq_1 + \sigsq_2}$ using the definition of convolution on a separate page. This is a lot of boring algebra but it will hone your skills. You can find it in the book or on the Internet (but try not to look at the answer).}\spc{-0.5}
+%
+%%\intermediatesubproblem{Let $X \sim \normnot{\mu}{\sigsq}$ and $Y=X ~|~X \geq a$. Find $f_Y(y)$.}\spc{6}
+%
+%%\easysubproblem{Let $X \sim \lognormnot{\mu}{\sigsq}$ and $Y=\natlog{X}$. How is $Y$ distributed? Use a heuristic argument. No need to actually change variables.}\spc{1}
+%
+%
+%%\intermediatesubproblem{Let $X_1 \sim \lognormnot{\mu_1}{\sigsq_1}$, $X_2 \sim \lognormnot{\mu_2}{\sigsq_2}, \ldots, X_n \sim \lognormnot{\mu_n}{\sigsq_n}$ all independent of each other and $Y=\prod_{i=1}^n X_i$. How is $Y$ distributed? Use a heuristic argument. No need to actually change variables.}\spc{1}
+%
+%%\intermediatesubproblem{The average return of the S\&P 500 stock index since 1928 is 11.4\% and the standard deviation is 19.7\%. Assume for the purposes of this problem that percentage returns is normally distributed (even though it is not true in practice). If you put \$1,000 into the stock market, what is the probability you have \$5,000 after 10 years? The \texttt{R} function you need is \texttt{plnorm}.}\spc{6}
+%
+%
+%%\easysubproblem{Using $Z_1,  Z_2, \ldots \iid \stdnormnot$, find a function $g$ s.t. $g(Z_1,  Z_2, \ldots, k_1, \ldots) \sim \chisq{k}$ where $k_1, \ldots$ represents constants.}\spc{3}
+%
+%\easysubproblem{Let $X \sim \chisq{k}$, find $\expe{X}$ using the fact that $X = Z_1^2 + Z_2^2 + \ldots + Z_k^2$ where $Z_1,  Z_2, \ldots, Z_k \iid \stdnormnot$.}\spc{3}
+%
+%\easysubproblem{Let $X \sim \chisq{k} = \gammanot{\overtwo{k}}{\half}$. Find the PDF of $X$ by making the correct substitutions in the gamma PDF and simplifying.}\spc{3}
+%
+%
+%\easysubproblem{Using $Z_1,  Z_2, \ldots \iid \stdnormnot$, the function $g$ s.t. $g(Z_1,  Z_2, \ldots)  \sim \chisq{k}$ where $k \in \naturals$ is a constant is given below:
+%
+%\ingreen{
+%\beqn
+%g(Z_1,  Z_2, \ldots) = Z_1^2 + Z_2^2 + \ldots + Z_k^2 \sim \chisq{k}
+%\eeqn}
+%
+%Following this example, find a function $g$ s.t. $g(Z_1,  Z_2, \ldots) \sim F_{k_1,k_2}$ where $k_1, k_2 \in \naturals$ are constants.}\spc{3}
+%
+%\easysubproblem{Let $X \sim F_{k_1,k_2}$, find the kernel of $f_X(x)$.}\spc{3}
+%
+%\easysubproblem{Using $Z_1,  Z_2, \ldots \iid \stdnormnot$, find a function $g$ s.t. $g(Z_1,  Z_2, \ldots)  \sim T_{k}$ where $k \in \naturals$ is a constant.}\spc{3}
+%
+%
+%\easysubproblem{Let $X \sim T_k$, find the kernel of $f_X(x)$.}\spc{3}
+%
+%\extracreditsubproblem{Derive the PDF of the $T_k$ distribution using the ratio formula where you first find the distribution of the denominator explicitly. Do on a separate piece of paper.}\spc{0}
+%
+%
+%\extracreditsubproblem{Show that the PDF of $X \sim T_k$, converges to the PDF of $Z \sim \stdnormnot$ when $k \rightarrow \infty$. Hint: use Stirling's approximation. Do on a separate piece of paper.}\spc{0}
+%
+%
+%\easysubproblem{Let $X \sim \cauchynot{0}{1}$, find the kernel of $f_X(x)$.}\spc{3}
+%
+%\easysubproblem{Using $Z_1,  Z_2, \ldots \iid \stdnormnot$, find a function $g$ s.t. $g(Z_1,  Z_2, \ldots) \sim \cauchynot{0}{1}$.}\spc{1}
+%
+%\easysubproblem{Let $X \sim \cauchynot{0}{1}$, prove that $\expe{X}$ does not exist without using its ch.f.}\spc{7}
+%
+%
+%\end{enumerate}
