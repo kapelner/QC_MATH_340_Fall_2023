@@ -52,7 +52,7 @@ NAME: \line(1,0){380}
 \hardsubproblem{Let $X \sim \geometric{p_x}$ independent of $Y \sim \geometric{p_y}$. Find $\prob{X > Y}$ using the method we did in class.}\spc{10}
 
 
-\easysubproblem{[MA] Prove this a different way by finding $\prob{X = Y}$ and then using the law of total probability.}\spc{10}
+\easysubproblem{[MA] Let $p_x = p_y$. Find $\prob{X > Y}$ in a different way by finding $\prob{X = Y}$ and then using the law of total probability.}\spc{10}
 
 \intermediatesubproblem{As both $p_x$ and $p_y$ are reduced to zero, but $r = \frac{p_x}{p_y}$, what is the asymptotic probability you found in (a)?}\spc{10}
 
@@ -74,9 +74,9 @@ NAME: \line(1,0){380}
 
 \easysubproblem{Resolve as best as possible: $\int_{-\infty}^d \indic{x \in \bracks{0, c}}\mathrm{d}x$ where $c,d \in \reals$.}\spc{1}
 
-\easysubproblem{Resolve as best as possible: $\int_{d}^{d+1} \indic{x \in \bracks{0, c}}\mathrm{d}x$ where $c,d \in \reals$.}\spc{1}
+\intermediatesubproblem{Resolve as best as possible: $\int_{d}^{d+1} \indic{x \in \bracks{0, c}}\mathrm{d}x$ where $c,d \in \reals$ and $c \geq 1$.}\spc{1}
 
-\intermediatesubproblem{Resolve as best as possible: $\int_{d}^{d+1} \indic{x \in \bracks{c, c + 1}}\mathrm{d}x$ where $c,d \in \reals$.}\spc{1}
+\intermediatesubproblem{Resolve as best as possible: $\int_{d}^{d+1} \indic{x \in \bracks{c, c + 1}}\mathrm{d}x$ where $c,d \in \reals$. and $c > 0$.}\spc{1}
 
 \end{enumerate}
 
@@ -99,9 +99,9 @@ NAME: \line(1,0){380}
 
 
 
-\easysubproblem{Find the expectation of $T \sim \erlang{k}{\lambda}$. Use the linearity rules!}\spc{1}
+\easysubproblem{Find the expectation of $T \sim \erlang{k}{\lambda}$. Use the expectation of the exponential rv and the linearity rules!}\spc{1}
 
-\easysubproblem{Find the variance of $T \sim \erlang{k}{\lambda}$. Use the linearity rules!}\spc{3}
+\easysubproblem{Find the variance of $T \sim \erlang{k}{\lambda}$. Use the variance of the exponential rv and and the linearity rules!}\spc{3}
 
 \easysubproblem{Why is the geometric distribution analogous to the exponential distribution? Why is the negative binomial distribution analogous to the erlang distribution?}\spc{3}
 
@@ -128,7 +128,7 @@ NAME: \line(1,0){380}
 
 \intermediatesubproblem{Use P4 to compute the variance of rv $X$ using only $\phi_X(t)$ and its derivative(s).}\spc{4}
 
-\hardsubproblem{For continuous rv $X \sim f_X(x)$, given the Fourier inversion theorem, if $\phi_X(t) \in L^1$ then prove P6 below:
+\hardsubproblem{For continuous rv $X \sim f_X(x)$, given the Fourier inversion theorem, if $\phi_X(t) \in L^1$ then prove P6 below. Hint: translate the Fourier formulas (the ones with $g$ and $\hat{g}$ into our vocabulary and then use $u$-substitions.
 
 \beqn
 f_X(x) = \oneover{2\pi} \int_\reals e^{itx} \phi_X(t) dt.
@@ -160,7 +160,7 @@ f_X(x) = \oneover{2\pi} \int_\reals e^{itx} \phi_X(t) dt.
 \intermediatesubproblem{[MA] Prove the ch.f. from the previous problem limits to the ch.f. for $\exponential{\lambda}$. This really is just an elaborate calculus exercise. The point being is that using ch.f's is not always easier to derive rv's than the direct method using PMF's and PDF's.}\spc{9}
 
 
-\intermediatesubproblem{Let $X \sim \uniform{a}{b}$. Find $\phi_X(t)$.}\spc{6}
+\easysubproblem{Let $X \sim \uniform{a}{b}$. Find $\phi_X(t)$.}\spc{6}
 
 \end{enumerate}
 
@@ -174,7 +174,7 @@ f_X(x) = \oneover{2\pi} \int_\reals e^{itx} \phi_X(t) dt.
 
 \intermediatesubproblem{What is the main implication of the LLN? Write in English.}\spc{1}
 
-\intermediatesubproblem{State the additonal assumption(s) of the CLT in addition to assumptions that were needed to prove the LLN.}\spc{1}
+\easysubproblem{State the additonal assumption(s) of the CLT in addition to assumptions that were needed to prove the LLN.}\spc{1}
 
 \easysubproblem{Prove the CLT i.e. prove the limiting ch.f. of the standardized average rv is $e^{-t^2/2}$, the ch.f. for $Z \sim \stdnormnot$.}\spc{16}
 
