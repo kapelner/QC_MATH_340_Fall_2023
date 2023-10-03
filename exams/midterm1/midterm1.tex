@@ -1,0 +1,340 @@
+\documentclass[12pt]{article}
+
+\include{preamble}
+
+\newcommand{\instr}{\small Your answer will consist of a lowercase string (e.g. \texttt{aebgd}) where the order of the letters does not matter. \normalsize}
+
+\title{Math 340 / 640 Fall \the\year{} \\ Midterm Examination One}
+\author{Professor Adam Kapelner}
+
+\date{October 2, \the\year{}}
+
+\begin{document}
+\maketitle
+
+%\noindent Full Name \line(1,0){410}
+
+\thispagestyle{empty}
+
+\section*{Code of Academic Integrity}
+
+\footnotesize
+Since the college is an academic community, its fundamental purpose is the pursuit of knowledge. Essential to the success of this educational mission is a commitment to the principles of academic integrity. Every member of the college community is responsible for upholding the highest standards of honesty at all times. Students, as members of the community, are also responsible for adhering to the principles and spirit of the following Code of Academic Integrity.
+
+Activities that have the effect or intention of interfering with education, pursuit of knowledge, or fair evaluation of a student's performance are prohibited. Examples of such activities include but are not limited to the following definitions:
+
+\paragraph{Cheating} Using or attempting to use unauthorized assistance, material, or study aids in examinations or other academic work or preventing, or attempting to prevent, another from using authorized assistance, material, or study aids. Example: using an unauthorized cheat sheet in a quiz or exam, altering a graded exam and resubmitting it for a better grade, etc.\\
+\\
+\noindent I acknowledge and agree to uphold this Code of Academic Integrity. \\~\\
+
+\begin{center}
+\line(1,0){350} ~~~ \line(1,0){100}\\
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~signature~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ date
+\end{center}
+
+\normalsize
+
+\section*{Instructions}
+This exam is 110 minutes (variable time per question) and closed-book. You are allowed \textbf{one} page (front and back) of a \qu{cheat sheet}, blank scrap paper (provided by the proctor) and a graphing calculator (which is not your smartphone). Please read the questions carefully. Within each problem, I recommend considering the questions that are easy first and then circling back to evaluate the harder ones. No food is allowed, only drinks. %If the question reads \qu{compute,} this means the solution will be a number otherwise you can leave the answer in \textit{any} widely accepted mathematical notation which could be resolved to an exact or approximate number with the use of a computer. I advise you to skip problems marked \qu{[Extra Credit]} until you have finished the other questions on the exam, then loop back and plug in all the holes. I also advise you to use pencil. The exam is 100 points total plus extra credit. Partial credit will be granted for incomplete answers on most of the questions. \fbox{Box} in your final answers. Good luck!
+
+\pagebreak
+
+
+\problem This problem is about a new rv,
+
+\beqn
+X \sim \poisson{\lambda} := \frac{\lambda^x e^{-\lambda}}{x!} \indic{x \in \naturals_0} 
+\eeqn
+
+\noindent whose parameter space for its sole parameter is $\lambda > 0$.
+
+
+\begin{enumerate}[(a)]
+
+
+\subquestionwithpoints{3} What is the support of $X$? $\support{X}$ = 
+
+\subquestionwithpoints{4} Circle one: this rv is \quad discrete \quad / \quad continuous.
+
+
+\subquestionwithpoints{4} $p^{old}(x) = $\spc{0}
+
+
+\subquestionwithpoints{5} $\prob{X \in [-2,2]} = $\spc{0}
+
+\subquestionwithpoints{7} Recall the Taylor series for the exponential function of $a$ where $a \in \reals$:
+
+\beqn
+e^a = 1 + a + \frac{a^2}{2!} + \frac{a^3}{3!} + \frac{a^4}{4!} + \ldots \quad\quad\quad\quad\quad\quad\quad\quad
+\eeqn
+
+Using this fact, prove the Humpty-dumpty rule for the PMF of $X$.\spc{5}
+
+\subquestionwithpoints{6} Write an expression for the CDF of $X$ below denoted $F_X(x)$. For simplicity, assume only $x \in \support{X}$ will be evaluated by this function. Note: the CDF is not available in closed form. Simplify as much as possible. \spc{6}
+
+\subquestionwithpoints{7} Recall the following combinatorial identity from Math 241:
+
+\beqn
+\sum_{i=0}^n \binom{n}{i} = 2^n
+\eeqn
+
+Let $X_1, X_2 \iid \poisson{\lambda}$ and $T = X_1 + X_2$. Prove the convolution of $p_T(t) = p_{X_1}(x) \star p_{X_2}(x)$ is Poisson and find its parameter value. You may not use characteristic functions to solve this problem. For maximum partial credit, provide the appropriate formula for the convolution and justify each intermediate step. This question is difficult. You may want to do parts (h) and (i) before doing this problem. \spc{9}
+
+\subquestionwithpoints{6} Prove $\phi_X(t) = e^{\lambda (e^{it} - 1)}$. For maximum partial credit, provide the definition of the ch.f. and justify each intermediate step. \spc{10}
+
+\subquestionwithpoints{5} Let $X_1, X_2 \iid \poisson{\lambda}$ and $T = X_1 + X_2$. Using the characteristic function of the Poisson, prove that $T$ is a Poisson rv and find its parameter value. Justify each step. \spc{6}
+
+
+\subquestionwithpoints{6} Let $X_1, X_2, \ldots, X_n \iid \poisson{17}$ and let $\Xbar_n = \oneover{n}(X_1 + \ldots + X_n)$. If $n$ is very large, what real-number value will $\xbar_n$ be approximately equal to and why? Hint: for $X \sim \poisson{\lambda}$, then $\phi'_X(t)= i\lambda e^{it} e^{\lambda e^{it}} e^{-\lambda}$.\spc{6}
+
+\subquestionwithpoints{6} Let $X_n \sim \poisson{\lambda / n}$, $n \in \naturals$. Prove that $X_n \convd 0$. Justify each step.\spc{6}
+
+\end{enumerate}
+
+
+\problem Consider rolling a fair die 21 times. The die has 6 sides marked 1, 2, 3, 4, 5, 6 where the side that faces up upon the rolling of the die is uniform discrete.
+
+\begin{enumerate}
+
+\subquestionwithpoints{6} Find an expression for the probability of getting one 1, two 2's, three 3's, four 4's, five 5's and six 6's where the order of those rolls does not matter.\spc{4}
+
+\subquestionwithpoints{6} If $X_1$ is the rv that represents the number of 1's rolled in the 21 rolls, find an expression for $\prob{X_1 = x}$ where $x$ can be any real number.\spc{3}
+
+\end{enumerate}
+
+\problem This problem has disconnected theory questions.
+
+\begin{enumerate}
+
+\subquestionwithpoints{6} Prove that $\cov{aX}{X} = a\var{X}$ from the definition of covariance.\spc{3}
+
+\subquestionwithpoints{6} Let $X$ be a discrete non-negative non-degenerate rv. Prove that $\expe{X} > 0$.\spc{4}
+
+\subquestionwithpoints{5} Under what condition(s) is the following identity true?
+
+\beqn
+g(t) = \int_\reals e^{2\pi i\omega t} \int_\reals e^{-2\pi i\omega t} g(t) dt d\omega.
+\eeqn\spc{4}
+
+
+\subquestionwithpoints{6} Let $X_1, \ldots, X_n \iid $ with mean 1 and variance 2. Let $T = X_1 + \ldots + X_n$. Find the approximate probability $T > 3$. Leave your answer in terms of the $\Phi$ function.\spc{4}
+
+\subquestionwithpoints{6}  Let $X \sim \erlang{4}{2}$. Find an integral expression for $\prob{X > 3}$. Simplify as much as possible.
+
+\end{enumerate}
+
+\end{document}
+
+
+
+
+
+\vspace{-0.2cm}\benum\truefalsesubquestionwithpoints{18} 
+
+\begin{enumerate}[(a)]
+
+
+
+
+
+\item $\sum_{x \in \reals} \indic{x \in \braces{a}} = a$
+\item $\sum_{x \in \reals} \indic{x \in \braces{a}} = 1$
+\item $\sum_{x \in \reals} a\indic{x \in \braces{a}} = a$
+\item $\sum_{x \in \reals} a\indic{x \in \braces{a}} = 1$
+\item $\prod_{x \in \reals} a\indic{x \in \braces{a}} = a$
+\item $\prod_{x \in \reals} a\indic{x \in \braces{a}} = 1$  
+
+\item $\int_{\reals} a\indic{x \in [a,b]} = a$  
+\item $\int_{\reals} a\indic{x \in [a,b]} = b$  
+\item $\int_{\reals} a\indic{x \in [a,b]} = b-a$
+\item $\int_0^1 \indic{x \in [a,b]} = b-a$
+
+
+
+\item $p(x) = p^{old}(x)\indic{x \in \support{X}}$
+\item $\sum_{x \in \reals} p^{old}(x) = 1$
+\item $\sum_{x \in \support{X}} p^{old}(x) = 1$
+
+\item $\sum_{x \in \naturals} p(x) = 1$
+\item $\sum_{x \in \integers} p(x) = 1$
+
+\item $\int_{\reals} p^{old}(x) = 1$
+\item $\int_{\support{X}} p^{old}(x) = 1$
+
+\item $\sum_{x \in \support{X}} p^{old}(x)^2 = 1$
+
+\end{enumerate}
+\eenum\instr\pagebreak
+
+
+%%%%%%%%%%%%%%%%%%
+\problem\timedsection{11} Let $X \sim U(\braces{1,2,3})$ and $Y \sim U(\braces{-1,-2,-3})$ and $T = X + Y$.
+
+\vspace{-0.2cm}\benum\truefalsesubquestionwithpoints{19} 
+
+\begin{enumerate}[(a)]
+\item $\sum_{x \in \reals} p_{X,Y}(x,y) = 1$
+\item $p_{X,Y}$ has at most 9 $x,y$ input pairs that produce nonzero values
+\item $p_X^{old}(x) = 1/3$
+\item $p_Y^{old}(y) = 1/3$
+\item $p_T^{old}(t) = 1/9$ if $X,Y$ are independent.
+\item $p_T^{old}(2) = 1/9$ if $X,Y$ are independent.
+\item $p_T(t) = p_{X,Y}(x,y) \star p_{X,Y}(x,y)$
+\item $p_T(t) = \sum_{x \in \reals} \sum_{y \in \reals} p_{X,Y}(x,y)$
+\item The expectation of $T$ is 0 if $X,Y$ are independent.
+\item The expectation of $T$ is 0 regardless of the dependence relationship of $X, Y$.
+\item $\support{T} = \braces{-2, -1, 0, 1, 2}$ if $X,Y$ are independent.
+\item $\support{T} = \braces{-2, -1, 0, 1, 2}$ regardless of the dependence relationship of $X, Y$.
+\item $T$ could be a degenerate rv.
+\item You can compute $p_T(t)$ for all $t \in \reals$ if $X,Y$ are independent given the information provided.
+\item You can compute $p_T(t)$ for all $t \in \reals$ if $X,Y$ are dependent given the information provided.
+\item $\cov{X}{Y} = 0$ if $X,Y$ are independent.
+\item $\cov{X}{T} = 0$ if $X,Y$ are independent.
+\item $\cov{Y}{T} = \expe{YT} - \expe{Y}\expe{T}$ if $X,Y$ are independent.
+\item $\cov{X}{Y} = \cov{Y}{X}$ if $X,Y$ are dependent.
+\end{enumerate}
+\eenum\instr\pagebreak
+
+%%%%%%%%%%%%%%%%%%
+\problem\timedsection{10} Let $X \sim \geometric{p_x}$ independent of $Y \sim \geometric{p_y}$ and $T = X + Y$.
+
+\vspace{-0.2cm}\benum\truefalsesubquestionwithpoints{15} 
+
+\begin{enumerate}[(a)]
+\item The PMF of $T$ can be derived using one of the discrete convolution formulas
+\item $\support{X} = \support{T}$
+\item If $p_x > p_y$ it is likely that $X > Y$
+\item $T \sim \geometric{p_x+p_y}$
+\item $T \sim \negbin{2}{p_x+p_y}$
+\item If $p_x = p_y = 1$, $T$ is a degenerate rv
+\item If $p_x = p_y = 0$, $T$ is a degenerate rv
+\item If $p_x = p_y = \half$ then $T \sim \negbin{2}{\half}$
+\item If $p_x = p_y = \half$ then $\prob{X = Y} > 0$
+\item If $p_x = p_y = \half$ then $\prob{X = Y} = \frac{3}{4}$
+\item If $p_x = p_y = \half$ then $\prob{X = Y} = \oneover{3}$
+\item If $p_x = p_y = \half$ then $\prob{X = Y} = \half$
+\item If $p_x = p_y = \half$ then $\prob{X = Y} = \oneover{4}$
+\item If $p_x = p_y = \half$ then $\prob{X = Y} = \oneover{8}$
+\item If $p_x = p_y = \half$ then $\prob{X = Y} = \oneover{16}$
+\end{enumerate}
+\eenum\instr\pagebreak
+
+%%%%%%%%%%%%%%%%%%
+\problem\timedsection{10} Let $X \sim \geometric{p}$ independent of $Y \sim \geometric{p}$ and $T = X + Y$.
+
+\vspace{-0.2cm}\benum\truefalsesubquestionwithpoints{13} 
+
+\begin{enumerate}[(a)]
+%\item $\prob{T = 6} = 7(1-p)^7 p^2$
+%\item $\prob{T = 6} = 7(1-p)^6 p^2$
+%\item $\prob{T = 6} = 6(1-p)^7 p^2$
+%\item $\prob{T = 6} = 6(1-p)^6 p^2$
+\item $p_{X\,|\,T}(x,t) = p_{X,T}(x,t)$
+\item $p_{X\,|\,T}(x,t) = p_{X,Y}(x,t) / p_T(t)$
+\item $p_{X\,|\,T}(x,t) = p_{X,Y}(x,t-x) / p_T(t)$
+\item $p_{X\,|\,T}(x,t) = \displaystyle \frac{(1-p)^x (1-p)^{t-x}}{(t+1) (1-p)^t}$
+\item $p_{X\,|\,T}(x,t) = \displaystyle \frac{(1-p)^x (1-p)^{t-x}}{(t+1) (1-p)^t p^2}$
+\item $p_{X\,|\,T}(x,t) = \displaystyle \frac{(1-p)^x (1-p)^{t-x}}{t (1-p)^{t+1}}$
+\item $p_{X\,|\,T}(x,t) = \displaystyle \frac{(1-p)^x (1-p)^{t-x}}{t (1-p)^{t+1} p^2}$
+\item $p_{X\,|\,T}(x,t)$ is a geometric rv
+\item $p_{X\,|\,T}(x,t)$ is a negative binomial rv
+\item $p_{X\,|\,T}(x,t)$ is a binomial rv
+\item $p_{X\,|\,T}(x,t)$ is a poisson rv
+\item $p_{X\,|\,T}(x,t)$ is a uniform discrete rv
+\item $p_{X\,|\,T}(x,t)$ is a degenerate rv
+\end{enumerate}
+\eenum\instr\pagebreak
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%
+\problem\timedsection{7} Let $\X = \bracks{\Xoneton}^\top \sim p(\x)$ and $\expe{\X} = \zerovec_n$.
+
+\vspace{-0.2cm}\benum\truefalsesubquestionwithpoints{10} 
+
+\begin{enumerate}[(a)]
+\item If $\A$ be an $m \times n$ matrix of constants, then $\expe{\A\X} = \zerovec_m$
+\item $\var{\X}$ is an $n \times n$ matrix with entries $\expe{X_i X_j}$ at row $i$ and column $j$
+\item $\var{\X}$ can be written as a quadratic form
+\item $\var{\X}$ can be written as the expectation of an inner product 
+\item $\var{\X}$ can be written as the expectation of an outer product 
+\item If $\Xoneton \inddist$ then $\var{\X} = \I_n$
+\item There exists a $p(\x)$ where $\var{\X}$ is \emph{not} symmetric
+\item There exists a $p(\x)$ where $\var{\onevec^\top \X} > \sum_{i=1}^n \var{X_i}$
+\item There exists a $p(\x)$ where $\var{\onevec^\top \X} = \sum_{i=1}^n \var{X_i}$
+\item There exists a $p(\x)$ where $\var{\onevec^\top \X} < \sum_{i=1}^n \var{X_i}$
+\end{enumerate}
+\eenum\instr\pagebreak
+
+%%%%%%%%%%%%%%%%%%
+\problem\timedsection{10} Let $X_1 \sim \binomial{n_1}{p_1}$ independent of $X_2 \sim \binomial{n_2}{p_2}$ and consider the difference $D = X_1 - X_2 \sim p_D(d)$. Let $Y = -X_2$.
+
+\vspace{-0.2cm}\benum\truefalsesubquestionwithpoints{10} 
+
+\begin{enumerate}[(a)]
+\item If $n_1$ was large and $p_1 \approx 0$, then the PMF of $X_1$ can be approximated with low error by $\poisson{n_1 p_1}$
+\item $X_1 \sim \displaystyle \binom{n_1}{x} p_1^x (1-p_1)^{n_1 - x} \indic{x \in \braces{0, 1, \ldots, n_1}}$
+\item $X_2 \sim \displaystyle \binom{n_2}{x} p_2^x (1-p_2)^{n_2 - x} \indic{x \in \braces{0, 1, \ldots, n_2}}$
+\item $Y \sim \displaystyle \binom{n_2}{-y} p_2^{-y} (1-p_2)^{n_2 + y} \indic{y \in \braces{0, 1, \ldots, n_2}}$
+\item $p_D(d) = \displaystyle\sum_{x \in \reals} p_{X_1}(x) p_{X_2}(d - x)$
+\item $p_D(d) = \displaystyle\sum_{x \in \support{X_1}} p_{X_1}^{old}(x) p_{X_2}^{old}(d - x) \indic{d-x \in \braces{0, 1, \ldots, n_2}}$
+\item $p_D(d) = \displaystyle\sum_{x = 0}^{n_1} \binom{n_1}{x} p_1^x (1-p_1)^{n_1 - x} \binom{n_2}{x-d} p_2^{x-d} (1-p_2)^{n_2 + d - x} \indic{x-d \in \braces{0, 1, \ldots, n_2}}$
+\item $p_D(d) = \displaystyle\sum_{x = d}^{n_1} \binom{n_1}{x} p_1^x (1-p_1)^{n_1 - x} \binom{n_2}{x-d} p_2^{x-d} (1-p_2)^{n_2 + d - x}$
+\item $D$ is a binomial rv
+\item $D$ is a poisson rv
+\end{enumerate}
+\eenum\instr\pagebreak
+
+
+%%%%%%%%%%%%%%%%%%
+\problem\timedsection{12} A large factory produces marbles with the following color distribution:
+
+\begin{table}[h]
+\centering
+\begin{tabular}{l|lllll}
+Color 			& Blue & Red & Green & Yellow & Orange \\ \hline
+Percentage	     & 20    & 20   & 30      & 5        & 25
+\end{tabular}
+\end{table}
+
+\noindent You sample 100 marbles randomly from the assembly line. Let $X_b, X_r, X_g, X_y, X_o$ denote the rv's modeling the counts of Blue, Red, Green, Yellow and Orange marbles respectively in your sample and let $\X$ denote the column vector of those rv's stacked.
+
+\vspace{-0.2cm}\benum\truefalsesubquestionwithpoints{15} 
+
+\begin{enumerate}[(a)]
+\item $X_b \sim \binomial{100}{0.2}$ and $X_r \sim \binomial{100}{0.2}$
+\item $X_b + X_r \sim \binomial{200}{0.2}$
+\item $\expe{X_b + X_r} = 40$.
+\item $\x \in \reals$ 
+\item $\x^\top \onevec = 100$ for all $\x \in \support{\X}$
+\item $|\corr{X_b}{X_r}| = |\cov{X_b}{X_r}|$
+\item $|\corr{X_b}{X_r}| > |\corr{X_y}{X_g}|$
+\item $p_{X_b\,|\,X_r}(x, y)$ is undefined for $y > 100$
+\item Generally speaking, the more blue marbles in the sample, the less yellow marbles in the sample.
+\item If it is known that there are 8 blue marbles in the sample, then the number of yellow marbles is expected to be lower as compared to if you have no information about the number of blue marbles in the sample.\\
+
+For the remaining questions, assume that we are told there are 8 blue marbles in the sample.
+\item The number of yellow marbles will be a drawn from a $\binomial{92}{0.05}$ rv.
+\item The number of yellow marbles will be a drawn from a $\binomial{92}{0.0625}$ rv.
+\item The number of yellow marbles will be a drawn from a $\binomial{75}{0.05}$ rv.
+\item The number of yellow marbles will be a drawn from a $\binomial{75}{0.0625}$ rv.
+\item $\bracks{X_r\, X_g\, X_y\, X_o}^\top \sim \multinomial{4}{92}{\bv{p}}$ where the vector $\bv{p}$ can be computed using information provided in this problem.
+\end{enumerate}
+\eenum\instr\pagebreak
+
+\end{document}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\problem\timedsection{5} These are conceptual questions ...
+
+\vspace{-0.2cm}\benum\truefalsesubquestionwithpoints{14} 
+
+\begin{enumerate}[(a)]
+\item  
+\end{enumerate}
+\eenum\instr\pagebreak
