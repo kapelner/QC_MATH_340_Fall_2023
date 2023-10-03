@@ -91,6 +91,11 @@ NAME: \line(1,0){380}
 
 \easysubproblem{Illustrate the PDF and CDF of $X \sim \exponential{\lambda}$. Mark critical points on the y-axes.}\spc{4}
 
+
+%%% need these problems here for later problems
+%\easysubproblem{$X \sim \exponential{\lambda}$. Find $\expe{X}$ using $\phi_X(t) = \lambda / (\lambda - it)$.}\spc{2}
+%\intermediatesubproblem{$X \sim \exponential{\lambda}$. Find $\var{X}$ using $\phi_X(t) = \lambda / (\lambda - it)$.}\spc{4}
+
 \easysubproblem{Derive the $\exponential{\lambda}$ rv from the $X_n$ Geometric r.v. with $n$ experiments compacted per time period (identically to how we did in class). In the process, write the CDF, PMF and PDF of the Exponential rv. Make sure the PMF and PDF are valid $\forall x \in \reals$. The CDF you can leave in \qu{old} style.}\spc{9}
 
 
@@ -128,12 +133,41 @@ NAME: \line(1,0){380}
 
 \intermediatesubproblem{Use P4 to compute the variance of rv $X$ using only $\phi_X(t)$ and its derivative(s).}\spc{4}
 
-\hardsubproblem{For continuous rv $X \sim f_X(x)$, given the Fourier inversion theorem, if $\phi_X(t) \in L^1$ then prove P6 below. Hint: translate the Fourier formulas (the ones with $g$ and $\hat{g}$ into our vocabulary and then use $u$-substitions.
+\hardsubproblem{For continuous rv $X \sim f_X(x)$, given the Fourier inversion theorem, if $\phi_X(t) \in L^1$ then prove P6. Hint: translate the Fourier formulas (the ones with $g$ and $\hat{g}$ into our vocabulary and then use $u$-substitions.}
+
+\inblue{SOLUTION:} We begin with the statement of the forward Fourier transform. If $g \in L^1$,
 
 \beqn
-f_X(x) = \oneover{2\pi} \int_\reals e^{itx} \phi_X(t) dt.
+\hat{g}(\omega) = \int_\reals e^{-i2\pi\omega t} g(t) dt
 \eeqn
-}\spc{6}
+
+and the statement of the inverse Fourier transform. If $\hat{g} \in L^1$,
+
+\beqn
+g(t) = \int_\reals e^{i2\pi\omega t} \hat{g}(\omega) d\omega.
+\eeqn
+
+We translate this to our vocabulary in the following way: let $f \leftarrow g, x \leftarrow t, v \leftarrow \omega$. The two statements then become:
+
+\beqn
+\hat{g}(v)   &=& \int_\reals e^{-i2\pi v x} f(x) dx \\
+f(x)           &=& \int_\reals e^{i2\pi v x} \hat{g}(v) dv.
+\eeqn
+
+Now let $t = -2\pi v \Rightarrow v = -t / (2\pi), dv/dt = -1 / (2\pi), dv = -\oneover{2\pi} dt, v = \infty \Rightarrow t = -\infty, v = -\infty \Rightarrow t = \infty$. Making these substitions yields:
+
+\beqn
+\hat{g}(-t / (2\pi))   &=& \int_\reals e^{i t x} f(x) dx \\
+f(x)                       &=& \int_\infty^{-\infty} e^{-i t x} \hat{g}(-t / (2\pi)) \parens{-\oneover{2\pi}} dt \\
+&=& \oneover{2\pi} \int_\reals e^{-i t x} \hat{g}(-t / (2\pi)) dt.
+\eeqn
+
+Letting $\phi_X(t) := \hat{g}(-t / (2\pi))$ completes the proof:
+
+\beqn
+\phi_X(t)   &=& \int_\reals e^{i t x} f(x) dx \\
+f(x)           &=& \oneover{2\pi} \int_\reals e^{-i t x} \phi_X(t) dt.
+\eeqn
 
 
 
