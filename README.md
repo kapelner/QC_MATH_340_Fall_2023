@@ -18,8 +18,8 @@ My lecture notes are scanned in as PDF files contributed by myself.
 * Lecture 15 [(notes)](https://github.com/kapelner/QC_MATH_340_Fall_2023/blob/main/lectures/lec15.pdf)
 * Lecture 14 [(notes)](https://github.com/kapelner/QC_MATH_340_Fall_2023/blob/main/lectures/lec14.pdf)
 * Lecture 13 [(notes)](https://github.com/kapelner/QC_MATH_340_Fall_2023/blob/main/lectures/lec13.pdf)
-* Lecture 12 [(notes)](https://github.com/kapelner/QC_MATH_340_Fall_2023/blob/main/lectures/lec12.pdf)
-* Lecture 11 [(notes)](https://github.com/kapelner/QC_MATH_340_Fall_2023/blob/main/lectures/lec11.pdf)--> 
+* Lecture 12 [(notes)](https://github.com/kapelner/QC_MATH_340_Fall_2023/blob/main/lectures/lec12.pdf)--> 
+* Lecture 11 [(notes)](https://github.com/kapelner/QC_MATH_340_Fall_2023/blob/main/lectures/lec11.pdf) (partial audio on slack)
 * Lecture 10 [(notes)](https://github.com/kapelner/QC_MATH_340_Fall_2023/blob/main/lectures/lec10.pdf) [(Tau's audio)](https://cuny-my.sharepoint.com/:u:/g/personal/tao_wu01_qmail_cuny_edu/ETP0oGINqrpFl4fyY5YZ0YQBhKxvUlpG3Qgvpw_tLmAa6Q)
 * Lecture 9 [(notes)](https://github.com/kapelner/QC_MATH_340_Fall_2023/blob/main/lectures/lec09.pdf)
 * Lecture 8 [(notes)](https://github.com/kapelner/QC_MATH_340_Fall_2023/blob/main/lectures/lec08.pdf)
@@ -38,7 +38,7 @@ My lecture notes are scanned in as PDF files contributed by myself.
 * Homework 9 [(download)](https://github.com/kapelner/QC_MATH_340_Fall_2023/blob/main/homeworks/hw09/hw09.pdf?raw=true) [(view)](https://github.com/kapelner/QC_MATH_340_Fall_2023/blob/main/homeworks/hw09/hw09.pdf) (due 12/12)
 * Homework 8 [(download)](https://github.com/kapelner/QC_MATH_340_Fall_2023/blob/main/homeworks/hw08/hw08.pdf?raw=true) [(view)](https://github.com/kapelner/QC_MATH_340_Fall_2023/blob/main/homeworks/hw08/hw08.pdf) (due 12/2)
 * Homework 7 [(download)](https://github.com/kapelner/QC_MATH_340_Fall_2023/blob/main/homeworks/hw07/hw07.pdf?raw=true) [(view)](https://github.com/kapelner/QC_MATH_340_Fall_2023/blob/main/homeworks/hw07/hw07.pdf) (due 12/12)
-* Homework 6 [(download)](https://github.com/kapelner/QC_MATH_340_Fall_2023/blob/main/homeworks/hw06/hw06.pdf?raw=true) [(view)](https://github.com/kapelner/QC_MATH_340_Fall_2023/blob/main/homeworks/hw06/hw06.pdf) (not formally due)
+* Homework 6 [(download)](https://github.com/kapelner/QC_MATH_340_Fall_2023/blob/main/homeworks/hw06/hw06.pdf?raw=true) [(view)](https://github.com/kapelner/QC_MATH_340_Fall_2023/blob/main/homeworks/hw06/hw06.pdf)
 * Homework 5 [(download)](https://github.com/kapelner/QC_MATH_340_Fall_2023/blob/main/homeworks/hw05/hw05.pdf?raw=true) [(view)](https://github.com/kapelner/QC_MATH_340_Fall_2023/blob/main/homeworks/hw05/hw05.pdf) (due 12/1)-->
 * Homework 4 [(download)](https://github.com/kapelner/QC_MATH_340_Fall_2023/blob/main/homeworks/hw04/hw04.pdf?raw=true) [(view)](https://github.com/kapelner/QC_MATH_340_Fall_2023/blob/main/homeworks/hw04/hw04.pdf) (due 10/29)
 * Homework 3 [(download)](https://github.com/kapelner/QC_MATH_340_Fall_2023/blob/main/homeworks/hw03/hw03.pdf?raw=true) [(view)](https://github.com/kapelner/QC_MATH_340_Fall_2023/blob/main/homeworks/hw03/hw03.pdf) (due 10/7)
