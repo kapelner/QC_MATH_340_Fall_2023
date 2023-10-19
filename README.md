@@ -17,8 +17,8 @@ My lecture notes are scanned in as PDF files contributed by myself.
 * Lecture 16 [(notes)](https://github.com/kapelner/QC_MATH_340_Fall_2023/blob/main/lectures/lec16.pdf)
 * Lecture 15 [(notes)](https://github.com/kapelner/QC_MATH_340_Fall_2023/blob/main/lectures/lec15.pdf)
 * Lecture 14 [(notes)](https://github.com/kapelner/QC_MATH_340_Fall_2023/blob/main/lectures/lec14.pdf)
-* Lecture 13 [(notes)](https://github.com/kapelner/QC_MATH_340_Fall_2023/blob/main/lectures/lec13.pdf)
-* Lecture 12 [(notes)](https://github.com/kapelner/QC_MATH_340_Fall_2023/blob/main/lectures/lec12.pdf)--> 
+* Lecture 13 [(notes)](https://github.com/kapelner/QC_MATH_340_Fall_2023/blob/main/lectures/lec13.pdf)--> 
+* Lecture 12 [(notes)](https://github.com/kapelner/QC_MATH_340_Fall_2023/blob/main/lectures/lec12.pdf)
 * Lecture 11 [(notes)](https://github.com/kapelner/QC_MATH_340_Fall_2023/blob/main/lectures/lec11.pdf) (partial audio on slack)
 * Lecture 10 [(notes)](https://github.com/kapelner/QC_MATH_340_Fall_2023/blob/main/lectures/lec10.pdf) [(Tau's audio)](https://cuny-my.sharepoint.com/:u:/g/personal/tao_wu01_qmail_cuny_edu/ETP0oGINqrpFl4fyY5YZ0YQBhKxvUlpG3Qgvpw_tLmAa6Q)
 * Lecture 9 [(notes)](https://github.com/kapelner/QC_MATH_340_Fall_2023/blob/main/lectures/lec09.pdf)
