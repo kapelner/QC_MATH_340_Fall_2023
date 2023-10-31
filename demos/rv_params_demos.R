@@ -151,26 +151,67 @@ ggplot() +
   geom_function(fun = dweibull, args = list(shape = lambda, scale = 2), colour = "blue") +
   geom_function(fun = dweibull, args = list(shape = lambda, scale = 5), colour = "purple")
 
-### CLT vs T-stat convergence
+### LLN / CLT detailed convergence
 set.seed(42)
-n = 500
-Nsim = 1000
-zs = matrix(NA, nrow = n, ncol = Nsim)
-ts = array(NA, nrow = n, ncol = Nsim)
-for (nsim in 1 : Nsim){
-  x_exp = rexp(n)
-  zs[i, nsim] = 
+ns = c(1, 2, 5, 10, 50, 100, 500, 2000, 10000)
+RES = 2000
+
+rv = rexp
+rv_expectation = 1
+xmin = 0
+xmax = 5
+
+rv = runif
+xmin = 0
+xmax = 1
+rv_expectation = 0.5
+
+rv = function(n){rpareto(n, shape = 2)}
+xmin = 0
+xmax = 5
+rv_expectation = 2
+
+rv = rgumbel
+xmin = -5
+xmax = 5
+rv_expectation = 0.57721 #the Euler–Mascheroni constant
+
+
+rv = rcauchy
+xmin = -5
+xmax = 5
+rv_expectation = 0
+
+xs = matrix(rv(max(ns) * RES), ncol = RES)
+x_avg = matrix(NA, nrow = length(ns), ncol = RES)
+z_avg = matrix(NA, nrow = length(ns), ncol = RES)
+for (i_n in 1 : length(ns)){
+  n = ns[i_n]
+  x_avg[i_n, ] = colMeans(xs[1 : n, , drop = FALSE])
+  if (n > 1){
+    z_avg[i_n, ] = (x_avg[i_n, ] - rv_expectation) / (apply(xs[1 : n, , drop = FALSE], 2, sd) / sqrt(n))  
+  }
 }
 
-cmt_sim_data = data.table(
-  i = 1 : n, 
-  avgs = avgs,
-  inv_avgs = inv_avgs,
-  cubed_avgs = cubed_avgs
-)
-ggplot(melt(cmt_sim_data, id.vars = "i")) +
-  ylab("x-bar value") + 
-  xlim(0, 5000) + 
-  ylim(0, 2) + 
-  geom_line(aes(x = i, y = value, color = variable))
+for (i_n in 1 : length(ns)){
+  plot(ggplot(data.frame(x = x_avg[i_n, ])) +
+    ggtitle(paste0("simulated PDF of Xbar_", ns[i_n])) +
+    ylab("density") + 
+    xlim(xmin, xmax) + 
+    geom_histogram(aes(x = x, y = after_stat(density)), bins = 150) + 
+    geom_vline(xintercept = rv_expectation, color = "green")
+  )
+  readline("Press any key to continue...")
+}
 
+
+for (i_n in 2 : length(ns)){
+  plot(ggplot(data.frame(x = z_avg[i_n, ])) +
+         ggtitle(paste0("simulated PDF of Z_", ns[i_n])) +
+         ylab("density") + 
+         xlim(-4, 4) + 
+         geom_histogram(aes(x = x, y = after_stat(density)), bins = 100) + 
+         geom_function(fun = dnorm, colour = "red")
+  )
+  readline("Press any key to continue...")
+}
