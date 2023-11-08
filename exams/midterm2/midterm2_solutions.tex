@@ -48,14 +48,14 @@ This exam is 110 minutes (variable time per question) and closed-book. You are a
 
 \inred{
 
-The following is the density of the normal: $\mathcal{E} \sim \stdnormnot = \oneoversqrt{2\pi}e^{-\epsilon^2 / 2}$. Error distributions are defined by three conditions
+The following is the density of the normal: $\mathcal{E} \sim  f_{\mathcal{E}}(\epsilon) = \stdnormnot = \oneoversqrt{2\pi}e^{-\epsilon^2 / 2}$. Error distributions are defined by three conditions and these three are satisfied:
 
 \begin{enumerate}[(I)]
 \item Mean center i.e. $\expe{\mathcal{E}} = 0$. This is true as given.
 
 \item Density is symmetric around zero i.e. $f_{\mathcal{E}}(\epsilon) = f_{\mathcal{E}}(-\epsilon)$. This is true as $\oneoversqrt{2\pi}e^{-\epsilon^2 / 2} = \oneoversqrt{2\pi}e^{-(-\epsilon)^2 / 2}$.
 
-\item Density is strictly monotonically decreases in both directions i.e. $f_{\mathcal{E}}'(\epsilon) < 0$ for $\epsilon > 0$ and $f_{\mathcal{E}}'(\epsilon) > 0$ for $\epsilon < 0$. The derivative of the density is $f_{\mathcal{E}}'(\epsilon) = \oneoversqrt{2\pi} (-2\epsilon)e^{-\epsilon^2 / 2}$ which is negative for $\epsilon > 0$ and positive for $\epsilon < 0$.
+\item Density is strictly monotonically decreases in both directions i.e. $f_{\mathcal{E}}'(\epsilon) < 0$ for $\epsilon > 0$ and $f_{\mathcal{E}}'(\epsilon) > 0$ for $\epsilon < 0$. The derivative of the density is $f_{\mathcal{E}}'(\epsilon) = (-\epsilon)\oneoversqrt{2\pi} e^{-\epsilon^2 / 2} = -\epsilon f_{\mathcal{E}}(\epsilon)$ which is negative for $\epsilon > 0$ and positive for $\epsilon < 0$.
 \end{enumerate}
 }
 
@@ -66,19 +66,19 @@ The following is the density of the normal: $\mathcal{E} \sim \stdnormnot = \one
 \fbox{Answer \#1} Let $U = X_2$ thus $X_2 = h_2(M, U) = U$. Then we know $M = X_1 U$ thus $X_1 = h_1(M, U) = M / U$. We then have 
 
 \beqn
-\frac{\partial h_1}{\partial M} = U, ~~\frac{\partial h_1}{\partial U} = -M / U^2, ~~\frac{\partial h_2}{\partial M} = 0, ~~\frac{\partial h_2}{\partial U} = 1, ~~ |J_h| = |(U)(1) - (-M/U^2)(0)| = |U|
+\frac{\partial h_1}{\partial M} = \oneover{U}, ~~\frac{\partial h_1}{\partial U} = -M / U^2, ~~\frac{\partial h_2}{\partial M} = 0, ~~\frac{\partial h_2}{\partial U} = 1, ~~ |J_h| = |(1/U)(1) - (-M/U^2)(0)| = 1/|U|
 \eeqn 
 
-Putting it all together, $f_M(m) = \int_\reals f_{X_1, X_2}(h_1, h_2)|J_h| du = \int_\reals f_{X_1, X_2}\parens{\frac{m}{u}, u} |u| \,du$.
+Putting it all together, $f_M(m) = \int_\reals f_{X_1, X_2}(h_1, h_2)|J_h| du = \int_\reals f_{X_1, X_2}\parens{\frac{m}{u}, u} \oneover{|u|} \,du$.
 
 
 \fbox{Answer \#2} Let $U = X_1$ thus $X_1 = h_1(M, U) = U$. Then we know $M = U X_2$ thus $X_2 = h_2(M, U) = M / U$. We then have 
 
 \beqn
-\frac{\partial h_1}{\partial M} = 0, ~~\frac{\partial h_1}{\partial U} = 1, ~~\frac{\partial h_2}{\partial M} = U, ~~\frac{\partial h_2}{\partial U} = -M / U^2, ~~ |J_h| = |(0)(-M / U^2) - (1)(U)| = |U|
+\frac{\partial h_1}{\partial M} = 0, ~~\frac{\partial h_1}{\partial U} = 1, ~~\frac{\partial h_2}{\partial M} = 1/U, ~~\frac{\partial h_2}{\partial U} = -M / U^2, ~~ |J_h| = |(0)(-M / U^2) - (1)(1/U)| = 1/|U|
 \eeqn 
 
-Putting it all together, $f_M(m) = \int_\reals f_{X_1, X_2}(h_1, h_2)|J_h| du = \int_\reals f_{X_1, X_2}\parens{u, \frac{m}{u}} |u| \,du$.
+Putting it all together, $f_M(m) = \int_\reals f_{X_1, X_2}(h_1, h_2)|J_h| du = \int_\reals f_{X_1, X_2}\parens{u, \frac{m}{u}} \oneover{|u|} \,du$.
 
 
 }
@@ -172,20 +172,20 @@ We also have the CLT result from class:
 \frac{\Xbar - \mu}{\frac{\sigma}{\sqrt{n}}} \convd \stdnormnot
 \eeqn
 
-By algebra we have that
+Via the clever algebra trick from class,
 
 \beqn
 \frac{\Xbar - \mu}{\frac{S_n}{\sqrt{n}}} = \underbrace{\frac{\frac{\sigma}{\sqrt{n}}}{\frac{S_n}{\sqrt{n}}}}_{A_n} \underbrace{\frac{\Xbar - \mu}{\frac{\sigma}{\sqrt{n}}}}_{B_n} \convd \stdnormnot
 \eeqn
 
-where the $\convd \stdnormnot$ above follows from Slutsky's theorem $\textcircled{\tiny{A}}$.
+where the $\convd \stdnormnot$ above follows from Slutsky's theorem $\textcircled{\tiny{A}}$ as $A_n \convp 1$ and $B_n \convd \stdnormnot$.
 
 }\pagebreak
 
 \subquestionwithpoints{8} Let $X_n \sim \text{Weibull}(k, n)$ where $k > 0$. Prove $X_n \convp 0$ from the definition of convergence in probability.\\
 
 \inred{
-The $X_n \sim \text{Weibull}(k, n)$ rv is non-negative with CDF $F_{X_n}(x) =  1 - e^{-(nx)^k}$ and thus $S_{X_n}(x) =  e^{-(nx)^k}$. By the definition, $X_n \convp 0$ means:
+The $X_n \sim \text{Weibull}(k, n)$ rv is non-negative with CDF $F_{X_n}(x) =  1 - e^{-(nx)^k}$ and thus $\prob{X_n > \epsilon} = 1 - F_{X_n}(x) =  e^{-(nx)^k}$. By the definition, $X_n \convp 0$ means:
 
 \beqn
 \forall \epsilon > 0,~\limitn \prob{|X_n - 0| > \epsilon} = 0
@@ -194,10 +194,10 @@ The $X_n \sim \text{Weibull}(k, n)$ rv is non-negative with CDF $F_{X_n}(x) =  1
 We pick any positive $\epsilon$ and compute:
 
 \beqn
-\limitn \prob{|X_n - 0| > \epsilon} = \limitn \prob{X_n > \epsilon} = \limitn S_{X_n}(\epsilon) = \limitn e^{-(n\epsilon)^k} = 0
+\limitn \prob{|X_n - 0| > \epsilon} = \limitn \prob{X_n > \epsilon} = \limitn e^{-(n\epsilon)^k} = \lim_{u \rightarrow \infty}  \oneover{e^{c u}} = 0
 \eeqn
 
-where the first equality above follows from the non-negativity of $X$.
+where $u = n^k$, $c = \epsilon^k > 0$ and the first equality above follows from the non-negativity of $X$ allowing us to drop the absolute value within the probability operator.
 
 }
 
@@ -210,13 +210,13 @@ where the first equality above follows from the non-negativity of $X$.
 \prob{Y > b} \leq \frac{\sigsq_Y}{(b - \mu_Y)^2}
 \eeqn
 
-Since $3.14 > 2\mu = 2\cdot0.294 = 0.588$ we can employ this inequality and substitute to find:
+Since $b = 3.14 > 2\mu = 2\cdot0.294 = 0.588$ we can employ this inequality and then substitute our numeric values to find:
 
 \beqn
 \prob{X_1 + X_2 > 3.14} \leq \frac{\var{X_1 + X_2}}{(3.14 - \expe{X_1 + X_2})^2} = \frac{2\sigsq}{(3.14 - 2\mu)^2} = \frac{2 \cdot 0.0986}{(3.14 - 2 \cdot 0.294)^2} = 0.0303
 \eeqn
 
-\fbox{Acceptable Answer} By Markov's inequality and the fact that $X_1, X_2$ are both non-negative so their convolution is non-negative, we have
+\fbox{Acceptable Answer} By Markov's inequality and the fact that $X_1, X_2$ are both non-negative so their convolution is non-negative, we can employ this inequality and then substitute our numeric values to find:
 
 \beqn
 \prob{X_1 + X_2 > 3.14} \leq \frac{\expe{X_1 + X_2}}{3.14} = \frac{2\mu}{3.14}  = \frac{2 \cdot 0.294}{3.14} = 0.187
@@ -230,16 +230,16 @@ Since $3.14 > 2\mu = 2\cdot0.294 = 0.588$ we can employ this inequality and subs
 The rv $Z_1 / Z_2$ is Cauchy-distributed which means $\expe{X}$ is undefined. Since $\phi_X'(0) = \frac{\expe{X}}{i}$, the value of $\phi_X'(0)$ is undefined.
 }\pagebreak
 
-\subquestionwithpoints{10} Let $Z_1, Z_2 \iid \stdnormnot$. Let $X = \half Z_1^2 + Z_1 Z_2 + \half Z_2^2$. How is $X$ distributed? Hint: use Cochran's thm.\\
+\subquestionwithpoints{10} Let $Z_1, Z_2 \iid \stdnormnot$. Let $X = \half Z_1^2 + Z_1 Z_2 + \half Z_2^2$. How is $X$ distributed?\\
 
 \inred{
-Let $\bv{Z} = \bracks{Z_1~Z_2}^\top$. By playing around, we conjure a $B_1$ matrix so that $X$ is expressed as a quadratic form in the standard normal vector $\Z$:
+Our strategy is to use Cochran's theorem. Let $\bv{Z} = \bracks{Z_1~Z_2}^\top$. We now want a quadratic form with vector $\Z$, so we need to guess a determining matrix which we call $B_1$ and show this is an equivalent expression for our target rv $X$:
 
 \beqn
 X = \bv{Z}^\top B_1 \bv{Z} &=& \bracks{Z_1~Z_2} \underbrace{\twobytwomat{1/2}{1/2}{1/2}{1/2}}_{B_1} \twovec{Z_1}{Z_2}\\
 &=& \bracks{Z_1~Z_2} \twovec{\half Z_1 + \half Z_2}{\half Z_1 + \half Z_2} \\
 &=& \half Z_1^2 + \half Z_1 Z_2 + \half Z_2 Z_1+ \half Z_2^2 \\
-&=& \half Z_1^2 + 2 Z_1 Z_2 + \half Z_2^2
+&=& \half Z_1^2 + Z_1 Z_2 + \half Z_2^2
 \eeqn
 
 This matrix $B_1$ has $\rank{B_1} = 1$. To use Cochran's theorem, we conjure a matrix $B_2$:
@@ -248,7 +248,9 @@ This matrix $B_1$ has $\rank{B_1} = 1$. To use Cochran's theorem, we conjure a m
 B_2 = \twobytwomat{1/2}{-1/2}{-1/2}{1/2}
 \eeqn
 
-which has $\rank{B_2} = 1$ which can be seen by taking the negative of column 2 and noticing it is the same as column 1. Since $B_1 + B_2 = I_2$ and  $\rank{B_1} + \rank{B_2} = 2$, we can use Cochran's Thm's result that the quadratic forms are chi-squared distributed and thus:
+which has $\rank{B_2} = 1$ which can be seen by taking the negative of column 2 and noticing it is the same as column 1. 
+
+Putting the facts above together, $B_1 + B_2 = I_2$ and  $\rank{B_1} + \rank{B_2} = 2$. We now satisfied the conditions for Cochran's theorem and one of the three equivalent results. Thus, Cochran's Thm's implies the additional result that the quadratic forms are chi-squared distributed. This result gives us our answer for the distribution of $X$:
 
 \beqn
 X = \bv{Z}^\top B_1 \bv{Z} \sim \chisq{\rank{B_1}} = \chisq{1}
