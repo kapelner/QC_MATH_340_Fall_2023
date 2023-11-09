@@ -233,13 +233,12 @@ The rv $Z_1 / Z_2$ is Cauchy-distributed which means $\expe{X}$ is undefined. Si
 \subquestionwithpoints{10} Let $Z_1, Z_2 \iid \stdnormnot$. Let $X = \half Z_1^2 + Z_1 Z_2 + \half Z_2^2$. How is $X$ distributed?\\
 
 \inred{
-Our strategy is to use Cochran's theorem. Let $\bv{Z} = \bracks{Z_1~Z_2}^\top$. We now want a quadratic form with vector $\Z$, so we need to guess a determining matrix which we call $B_1$ and show this is an equivalent expression for our target rv $X$:
+\fbox{Via Cochran's theorem} Let $\bv{Z} = \bracks{Z_1~Z_2}^\top$. We now want a quadratic form with vector $\Z$, so we need to guess a determining matrix which we call $B_1$ and show this is an equivalent expression for our target rv $X$:
 
+\vspace{-0.3cm}
 \beqn
-X = \bv{Z}^\top B_1 \bv{Z} &=& \bracks{Z_1~Z_2} \underbrace{\twobytwomat{1/2}{1/2}{1/2}{1/2}}_{B_1} \twovec{Z_1}{Z_2}\\
-&=& \bracks{Z_1~Z_2} \twovec{\half Z_1 + \half Z_2}{\half Z_1 + \half Z_2} \\
-&=& \half Z_1^2 + \half Z_1 Z_2 + \half Z_2 Z_1+ \half Z_2^2 \\
-&=& \half Z_1^2 + Z_1 Z_2 + \half Z_2^2
+X = \bv{Z}^\top B_1 \bv{Z} &=& \bracks{Z_1~Z_2} \underbrace{\twobytwomat{1/2}{1/2}{1/2}{1/2}}_{B_1} \twovec{Z_1}{Z_2} =  \bracks{Z_1~Z_2} \twovec{\half Z_1 + \half Z_2}{\half Z_1 + \half Z_2} \\
+&=& \half Z_1^2 + \half Z_1 Z_2 + \half Z_2 Z_1+ \half Z_2^2 = \half Z_1^2 + Z_1 Z_2 + \half Z_2^2
 \eeqn
 
 This matrix $B_1$ has $\rank{B_1} = 1$. To use Cochran's theorem, we conjure a matrix $B_2$:
@@ -252,9 +251,28 @@ which has $\rank{B_2} = 1$ which can be seen by taking the negative of column 2 
 
 Putting the facts above together, $B_1 + B_2 = I_2$ and  $\rank{B_1} + \rank{B_2} = 2$. We now satisfied the conditions for Cochran's theorem and one of the three equivalent results. Thus, Cochran's Thm's implies the additional result that the quadratic forms are chi-squared distributed. This result gives us our answer for the distribution of $X$:
 
+\vspace{-0.3cm}
 \beqn
 X = \bv{Z}^\top B_1 \bv{Z} \sim \chisq{\rank{B_1}} = \chisq{1}
 \eeqn
+
+\fbox{Via Variable Transformation} We can write $X = \half(Z_1 - Z_2)^2$ Since $Z_1, Z_2 \iid \stdnormnot$, we know that $Z_1 - Z_2 \sim \normnot{0}{2}$. Let $U = Z_1 - Z_2$. We now seek to derive the density of $Y$ where $Y = U^2$:
+
+\vspace{-0.3cm}
+\beqn
+F_Y(y) &:=& \prob{Y \leq y} = \prob{U^2 \leq y} = \prob{U \in \bracks{-\sqrt{y}, \sqrt{y}}} = 2\prob{U \in \bracks{0, \sqrt{y}}} \\
+&=& 2\parens{F_U(\sqrt{y}) - F_U(0)} = 2\parens{F_U(\sqrt{y}) - \half} \\
+f_Y(y) &=& \frac{d}{dy}\bracks{F_Y(y)} = 2 \frac{d}{dy}\bracks{F_U(\sqrt{y}} = 2y^{-1/2} f_U(\sqrt{y}) = 2\parens{\half y^{-1/2}} \oneoversqrt{4\pi} e^{-\frac{(\sqrt{y})^2}{4}} \indic{\sqrt{y} \in (-\infty, \infty)} \\
+&=& \oneoversqrt{4\pi} y^{-1/2} e^{-\frac{y}{4}} \indic{y \in (0, \infty)}
+\eeqn
+
+Now since $X = \half Y$, we use the scaling formula:
+
+\beqn
+f_X(x) = 2 f_Y(2x) = 2\oneoversqrt{4\pi}  (2x)^{-1/2} e^{-\frac{2x}{4}} \indic{2x \in (0, \infty)} = \oneoversqrt{2\pi} x^{-1/2} e^{-x/2} \indic{x \in (0, \infty)} = \chisq{1}
+\eeqn
+
+\fbox{Via Multivariate Transformation} I do not think this is possible route as the function $X = \half(Z_1 - Z_2)^2$ is not invertible with a dummy dimension.
 }
 
 %set.seed(1)
