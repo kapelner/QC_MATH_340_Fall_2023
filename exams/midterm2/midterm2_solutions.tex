@@ -233,6 +233,16 @@ The rv $Z_1 / Z_2$ is Cauchy-distributed which means $\expe{X}$ is undefined. Si
 \subquestionwithpoints{10} Let $Z_1, Z_2 \iid \stdnormnot$. Let $X = \half Z_1^2 + Z_1 Z_2 + \half Z_2^2$. How is $X$ distributed?\\
 
 \inred{
+
+\fbox{Simplest way thanks to Bryan} We can write $X = \half(Z_1 - Z_2)^2$ Since $Z_1, Z_2 \iid \stdnormnot$, we know that $U := Z_1 - Z_2 \sim \normnot{0}{2}$. We can then write 
+
+\beqn
+X = \half U^2 = \parens{\fourth U}^2.
+\eeqn
+
+We know based on our transformation equations for the normal that $\fourth U \sim \stdnormnot$ which means $X \sim \chisq{1}$.
+
+
 \fbox{Via Cochran's theorem} Let $\bv{Z} = \bracks{Z_1~Z_2}^\top$. We now want a quadratic form with vector $\Z$, so we need to guess a determining matrix which we call $B_1$ and show this is an equivalent expression for our target rv $X$:
 
 \vspace{-0.3cm}
@@ -256,23 +266,23 @@ Putting the facts above together, $B_1 + B_2 = I_2$ and  $\rank{B_1} + \rank{B_2
 X = \bv{Z}^\top B_1 \bv{Z} \sim \chisq{\rank{B_1}} = \chisq{1}
 \eeqn
 
-\fbox{Via Variable Transformation} We can write $X = \half(Z_1 - Z_2)^2$ Since $Z_1, Z_2 \iid \stdnormnot$, we know that $Z_1 - Z_2 \sim \normnot{0}{2}$. Let $U = Z_1 - Z_2$. We now seek to derive the density of $Y$ where $Y = U^2$:
+%\fbox{Via Variable Transformation} We can write $X = \half(Z_1 - Z_2)^2$ Since $Z_1, Z_2 \iid \stdnormnot$, we know that $Z_1 - Z_2 \sim \normnot{0}{2}$. Let $U = Z_1 - Z_2$. We now seek to derive the density of $Y$ where $Y = U^2$:
+%
+%\vspace{-0.3cm}
+%\beqn
+%F_Y(y) &:=& \prob{Y \leq y} = \prob{U^2 \leq y} = \prob{U \in \bracks{-\sqrt{y}, \sqrt{y}}} = 2\prob{U \in \bracks{0, \sqrt{y}}} \\
+%&=& 2\parens{F_U(\sqrt{y}) - F_U(0)} = 2\parens{F_U(\sqrt{y}) - \half} \\
+%f_Y(y) &=& \frac{d}{dy}\bracks{F_Y(y)} = 2 \frac{d}{dy}\bracks{F_U(\sqrt{y}} = 2y^{-1/2} f_U(\sqrt{y}) = 2\parens{\half y^{-1/2}} \oneoversqrt{4\pi} e^{-\frac{(\sqrt{y})^2}{4}} \indic{\sqrt{y} \in (-\infty, \infty)} \\
+%&=& \oneoversqrt{4\pi} y^{-1/2} e^{-\frac{y}{4}} \indic{y \in (0, \infty)}
+%\eeqn
+%
+%Since $X = \half Y$, we can use the linear scaling formula:
+%
+%\beqn
+%f_X(x) = 2 f_Y(2x) = 2\oneoversqrt{4\pi}  (2x)^{-1/2} e^{-\frac{2x}{4}} \indic{2x \in (0, \infty)} = \oneoversqrt{2\pi} x^{-1/2} e^{-x/2} \indic{x \in (0, \infty)} = \chisq{1}
+%\eeqn
 
-\vspace{-0.3cm}
-\beqn
-F_Y(y) &:=& \prob{Y \leq y} = \prob{U^2 \leq y} = \prob{U \in \bracks{-\sqrt{y}, \sqrt{y}}} = 2\prob{U \in \bracks{0, \sqrt{y}}} \\
-&=& 2\parens{F_U(\sqrt{y}) - F_U(0)} = 2\parens{F_U(\sqrt{y}) - \half} \\
-f_Y(y) &=& \frac{d}{dy}\bracks{F_Y(y)} = 2 \frac{d}{dy}\bracks{F_U(\sqrt{y}} = 2y^{-1/2} f_U(\sqrt{y}) = 2\parens{\half y^{-1/2}} \oneoversqrt{4\pi} e^{-\frac{(\sqrt{y})^2}{4}} \indic{\sqrt{y} \in (-\infty, \infty)} \\
-&=& \oneoversqrt{4\pi} y^{-1/2} e^{-\frac{y}{4}} \indic{y \in (0, \infty)}
-\eeqn
-
-Now since $X = \half Y$, we use the scaling formula:
-
-\beqn
-f_X(x) = 2 f_Y(2x) = 2\oneoversqrt{4\pi}  (2x)^{-1/2} e^{-\frac{2x}{4}} \indic{2x \in (0, \infty)} = \oneoversqrt{2\pi} x^{-1/2} e^{-x/2} \indic{x \in (0, \infty)} = \chisq{1}
-\eeqn
-
-\fbox{Via Multivariate Transformation} I do not think this is possible route as the function $X = \half(Z_1 - Z_2)^2$ is not invertible with a dummy dimension.
+\fbox{Via Multivariate Transformation} I do not think this is a possible route as the function $X = \half(Z_1 - Z_2)^2$ is not invertible with a dummy dimension.
 }
 
 %set.seed(1)
