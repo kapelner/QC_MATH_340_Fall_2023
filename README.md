@@ -11,8 +11,8 @@ My lecture notes are scanned in as PDF files contributed by myself.
 * Lecture 22 [(notes)](https://github.com/kapelner/QC_MATH_340_Fall_2023/blob/main/lectures/lec22.pdf)
 * Lecture 21 [(notes)](https://github.com/kapelner/QC_MATH_340_Fall_2023/blob/main/lectures/lec21.pdf)
 * Lecture 20 [(notes)](https://github.com/kapelner/QC_MATH_340_Fall_2023/blob/main/lectures/lec20.pdf)
-* Lecture 19 [(notes)](https://github.com/kapelner/QC_MATH_340_Fall_2023/blob/main/lectures/lec19.pdf)
-* Lecture 18 [(notes)](https://github.com/kapelner/QC_MATH_340_Fall_2023/blob/main/lectures/lec18.pdf)--> 
+* Lecture 19 [(notes)](https://github.com/kapelner/QC_MATH_340_Fall_2023/blob/main/lectures/lec19.pdf)--> 
+* Lecture 18 [(notes)](https://github.com/kapelner/QC_MATH_340_Fall_2023/blob/main/lectures/lec18.pdf)
 * Lecture 17 [(notes)](https://github.com/kapelner/QC_MATH_340_Fall_2023/blob/main/lectures/lec17.pdf)
 * Lecture 16 [(notes)](https://github.com/kapelner/QC_MATH_340_Fall_2023/blob/main/lectures/lec16.pdf)
 * Lecture 15 [(notes)](https://github.com/kapelner/QC_MATH_340_Fall_2023/blob/main/lectures/lec15.pdf)
