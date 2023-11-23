@@ -1,0 +1,496 @@
+\documentclass[12pt]{article}
+
+\include{preamble}
+
+\newtoggle{professormode}
+\toggletrue{professormode} %STUDENTS: DELETE or COMMENT this line
+
+
+
+\title{MATH 340/640 Fall \the\year~ Homework \#6}
+
+\author{Professor Adam Kapelner} %STUDENTS: write your name here
+
+\iftoggle{professormode}{
+\date{Due by email 11:59PM December 2, \the\year \\ \vspace{0.5cm} \small (this document last updated \today ~at \currenttime)}
+}
+
+\renewcommand{\abstractname}{Instructions and Philosophy}
+
+\begin{document}
+\maketitle
+
+\iftoggle{professormode}{
+\begin{abstract}
+The path to success in this class is to do many problems. Unlike other courses, exclusively doing reading(s) will not help. Coming to lecture is akin to watching workout videos; thinking about and solving problems on your own is the actual ``working out.''  Feel free to \qu{work out} with others; \textbf{I want you to work on this in groups.}
+
+Reading is still \textit{required} --- read about the concepts we discussed in class online. For this homework set, review the previous random variables and read about mixture/compound distributions and order statistics.
+
+The problems below are color coded: \ingreen{green} problems are considered \textit{easy} and marked \qu{[easy]}; \inorange{yellow} problems are considered \textit{intermediate} and marked \qu{[harder]}, \inred{red} problems are considered \textit{difficult} and marked \qu{[difficult]} and \inpurple{purple} problems are extra credit. The \textit{easy} problems are intended to be ``giveaways'' if you went to class. Do as much as you can of the others; I expect you to at least attempt the \textit{difficult} problems. \qu{[MA]} are for those registered for 621 and extra credit otherwise.
+
+This homework is worth 100 points but the point distribution will not be determined until after the due date. See syllabus for the policy on late homework.
+
+Up to 5 points are given as a bonus if the homework is typed using \LaTeX. Links to instaling \LaTeX~and program for compiling \LaTeX~is found on the syllabus. You are encouraged to use \url{overleaf.com}. If you are handing in homework this way, read the comments in the code; there are two lines to comment out and you should replace my name with yours and write your section. The easiest way to use overleaf is to copy the raw text from hwxx.tex and preamble.tex into two new overleaf tex files with the same name. If you are asked to make drawings, you can take a picture of your handwritten drawing and insert them as figures or leave space using the \qu{$\backslash$vspace} command and draw them in after printing or attach them stapled.
+
+The document is available with spaces for you to write your answers. If not using \LaTeX, print this document and write in your answers. I do not accept homeworks which are \textit{not} on this printout. Keep this first page printed for your records.
+
+\end{abstract}
+
+\thispagestyle{empty}
+\vspace{1cm}
+NAME: \line(1,0){380}
+\clearpage
+}
+
+
+\problem{We will practice finding kernels and relating them to known distributions. The gamma function and the beta function will come up as well.}
+
+\begin{enumerate}
+
+\easysubproblem{Find the kernel of the PDF of $X \sim \text{Log}\normnot{\mu}{\sigsq}$.}\spc{2}
+
+\easysubproblem{Find the kernel of $X \sim \betanot{\alpha}{2}$.}\spc{2}
+
+\easysubproblem{Prove that $\betanot{1}{1} = \stduniform$.}\spc{2}
+
+\easysubproblem{Find the kernel of the beta negative binomial rv's PMF.}\spc{2}
+
+\easysubproblem{Find the kernel of the Lomax rv's PDF. See its Wikipedia article  \href{https://en.wikipedia.org/wiki/Lomax_distribution}{here}.}\spc{2}
+
+\easysubproblem{Find the kernel of the PDF of Fisher-Snecedor distribution, $F_{k_1,k_2}$.}\spc{2}
+
+%\intermediatesubproblem{If $k(x) = e^{-\lambda x} x^{k-1} \indic{x > 0}$ how would you know if the r.v. $X$ was an $\erlang{k}{\lambda}$ or a $\gammadist{k}{\lambda}$?}\spc{2}
+\intermediatesubproblem{If $k(x) = e^{ax - bx^2}$, solve for the normalization constant $c$.}\spc{2}
+
+
+\intermediatesubproblem{If $k(x) = xe^{-x^2} \indic{x > 0}$, how is $X$ distributed?}\spc{2}
+
+
+%\hardsubproblem{If the kernel without the indicator function is $x^{-d}$ where $d>1$, how is $X$ distributed?}\spc{5}
+
+
+%\easysubproblem{Prove $B(\alpha, \beta) = \frac{\Gammaf{\alpha}\Gammaf{\beta}}{\Gammaf{\alpha+\beta}}$ using the method from class.}\spc{9}
+
+
+\end{enumerate}
+
+\problem{We will now practice using order statistics concepts.}
+
+
+
+\begin{enumerate}
+
+\easysubproblem{If $\Xoneton \iid $ some continous rv where PDF is denoted $f(x)$ and its CDF is denoted $F(x)$, express the CDF of the maximum $X_i$ and express the CDF of the minimum $X_i$.}\spc{4}
+
+\easysubproblem{If $\Xoneton \iid $ some continous rv where PDF is denoted $f(x)$ and its CDF is denoted $F(x)$, express the PDF of the maximum $X_i$ and express the PDF of the minimum $X_i$.}\spc{2}
+
+\easysubproblem{If $\Xoneton \iid $ some continous rv where PDF is denoted $f(x)$ and its CDF is denoted $F(x)$, express the *CDF* of $X_{(k)}$ i.e. the $k$th smallest $X_i$.}\spc{5}
+
+\intermediatesubproblem{If $\Xoneton \iid $ some continous rv where its PDF is denoted $f(x)$ and its CDF is denoted $F(x)$, express the kernel of the PDF of $X_{(k)}$ i.e. the $k$th smallest $X_i$.}\spc{5}
+
+\intermediatesubproblem{If discrete $\Xoneton \iid $ some discrete rv, why would the formulas in (a-c) not be correct?}\spc{3}
+
+
+%\intermediatesubproblem{If $\Xoneton \iid \exponential{\lambda}$, find the PDF and CDF of the maximum.}\spc{4}
+%
+%\intermediatesubproblem{If $\Xoneton \iid \exponential{\lambda}$, find the PDF and CDF of the minimum.}\spc{4}
+
+\intermediatesubproblem{If $\Xoneton \iid \stduniform$, show that $X_{(k)} \sim \betanot{k}{n-k+1}$.}\spc{6}
+
+\intermediatesubproblem{Express $\binom{n}{k}$ in terms of the beta function.}\spc{5}
+
+
+%\extracreditsubproblem{If $\Xoneton \iid \uniform{a}{b}$, show that $X_{(k)}$ is a linear transformation of the beta distribution and find its parameters.}\spc{8}
+
+%\intermediatesubproblem{[MA] Show that $I_{x}(a,b+1) = I_{x}(a,b)+{\frac {x^{a}(1-x)^{b}}{b\mathrm {B} (a,b)}}.$}\spc{5}
+
+\hardsubproblem{[MA] If $X \sim \binomial{n}{p}$, show that $F(x) = I_{1-p}(n-k, k+1)$. You will need to assume the property $I_x(a,b) = 1 - I_{1-x}(b,a)$.}
+
+\inblue{This answer is done for you. You should all read it and understand it.}
+
+Assume $\Xoneton \iid \stduniform$. We know then that $F_X(x) = x$. So by the CDF formula for an order statistic $k$ and the fact that the CDF is a probability we have:
+
+\beqn
+F_{X_{(k)}}(x) &=& \sum_{j=k}^n \binom{n}{j} F_X(x)^j \tothepow{1 - F_X(x)}{n-j} \\
+&=& \sum_{j=k}^n \binom{n}{j} x^j \tothepow{1 - x}{n-j} \\
+&=& 1 - \sum_{j=0}^{k-1} \binom{n}{j} x^j \tothepow{1 - x}{n-j}
+\eeqn
+
+From class we proved that the order statistics for the standard uniform are distributed beta and we also know its CDF:
+
+\beqn
+X_{(k)} \sim \betanot{k}{n - k + 1} = \betanot{k}{n - (k - 1)} \mathimplies F_{X_{(k)}}(x) = I_x(k, n - (k - 1))
+\eeqn
+
+By the fact on \href{https://en.wikipedia.org/wiki/Beta_function}{wikipedia} about the $I$ function we have:
+
+\beqn
+F_{X_{(k)}}(x) = I_x(k, n - (k - 1)) =1 -  I_{1 - x}(n - (k - 1), k)
+\eeqn
+
+Thus we have the strange equality:
+
+\beqn
+\sum_{j=0}^{k-1} \binom{n}{j} x^j \tothepow{1 - x}{n-j} = I_{1 - x}(n - (k - 1), k)
+\eeqn
+
+Letting $y := k-1$,
+
+\beqn
+\sum_{j=0}^{y} \binom{n}{j} x^j \tothepow{1 - x}{n-j} = I_{1 - x}(n - y, y + 1)
+\eeqn
+
+Note that the lhs is the CDF for $Y \sim \binomial{n}{x}.~\blacksquare$ 
+
+\end{enumerate}\pagebreak
+
+
+\problem{We will practice using computing quantiles, finding the quantile function and sampling.}
+
+\begin{enumerate}
+
+\easysubproblem{Let $X$ be a continous rv. Prove $Y = F_X(X) \sim \stduniform$.}\spc{6}
+
+\intermediatesubproblem{If $X \sim \text{Logistic}(0,1)$, find $\text{MED}\bracks{X}$.}\spc{7}
+
+\easysubproblem{Write an algorithm for sampling from $X \sim \uniform{a}{b}$.}\spc{7}
+
+\intermediatesubproblem{Write an algorithm for sampling from $X \sim \text{Log}\normnot{\mu}{\sigsq}$.}\spc{6}
+
+\hardsubproblem{Write an algorithm for sampling from $X \sim \text{NegBin}(k, p)$.}\spc{6}
+
+\end{enumerate}
+
+\problem{We will now practice the conditional-on-total distributions.}
+
+\begin{enumerate}
+
+
+\easysubproblem{Prove the PMF of $X \sim \poisson{\lambda}$ using the limit as $n \rightarrow \infty$ and let $p = \overn{\lambda}$.}\spc{9}
+
+
+\hardsubproblem{Let $X_1, X_2 \iid \geometric{p}$ and $T = X_1 + X_2$. Find the PMF of $X_1~|~T = t$. It will be a brand name random variable.}\spc{7}
+
+
+\intermediatesubproblem{[MA] Let $X_1, X_2 \iid \binomial{n}{p}$ and $T = X_1 + X_2$. Show that $X_1~|~T = t$ is hypergeometric. You can find information about this r.v. online. Note we did not / will not study the hypergeometric further and it will not be covered on any exams.}\spc{7}
+
+%\hardsubproblem{Let $X_1 \sim \poisson{\lambda_1}$ independent of $X_2 \sim \poisson{\lambda_2}$. Find the PMF of the sum of $T = X_1 + X_2$ using a convolution.}\spc{12}
+
+%\hardsubproblem{Let $X \sim \poisson{\lambda}$ independent of $Y \sim \poisson{\lambda}$. Find an expression for $\prob{X > Y}$ \emph{as best as you are able to answer}. Part of this exercise is identifying where you cannot go any further.}\spc{9}
+
+\end{enumerate}
+
+
+\problem{We will now practice with mixture and compound distributions.}
+
+\begin{enumerate}
+
+\intermediatesubproblem{If $X \sim \bernoulli{0.17}$ and $Y\,|\,X = x \sim \normnot{x}{1}$, find the PDF of $Y$.}\spc{4}
+
+\intermediatesubproblem{Find the $\cprob{X = 1}{Y = 2}$.}\spc{4}
+
+
+\easysubproblem{If $X \sim \betanot{\alpha}{\beta}$ and $Y\,|\,X = x \sim \binomial{n}{x}$, find the PDF of $Y$.}\spc{4}
+
+
+\hardsubproblem{If $X \sim \gammanot{\alpha}{\beta}$ and $Y\,|\,X = x \sim \exponential{x}$, show that $Y \sim \text{Lomax}(\beta, \alpha)$. See the Lomax's Wikipedia article  by clicking \href{https://en.wikipedia.org/wiki/Lomax_distribution}{here}. Kernels always make it easier.}\spc{4}
+
+
+\end{enumerate}
+
+\end{document}
+
+
+
+
+
+
+\problem{Introducing the king: the normal distribution $\mathcal{N}$ and his princes/sses: the lognormal distribution Log$\mathcal{N}$, chi-squared distribution $\chi^2_k$, Student's T distribution $T_k$ and Fisher-Snecodor's distribution $F_{k_1,k_2}$.}
+
+\begin{enumerate}
+
+\easysubproblem{Let $X_1 \sim \normnot{\mu_1}{\sigsq_1}$ independent of $X_2 \sim \normnot{\mu_2}{\sigsq_2}$. Prove $X_1 + X_2 \sim  \normnot{\mu_1 + \mu_2}{\sigsq_1 + \sigsq_2}$ using ch.f.'s.}\spc{3}
+
+\extracreditsubproblem{Let $X_1 \sim \normnot{\mu_1}{\sigsq_1}$ independent of $X_2 \sim \normnot{\mu_2}{\sigsq_2}$. Prove $X_1 + X_2 \sim  \normnot{\mu_1 + \mu_2}{\sigsq_1 + \sigsq_2}$ using the definition of convolution. This is a lot of boring algebra but it will hone your skills. You can find it in the book or on the Internet (but try not to look at the answer).}\spc{20}
+
+%\intermediatesubproblem{Let $X \sim \normnot{\mu}{\sigsq}$ and $Y=X ~|~X \geq a$. Find $f_Y(y)$.}\spc{6}
+
+\intermediatesubproblem{Let $X \sim \lognormnot{\mu}{\sigsq}$ and $Y=\natlog{X}$. How is $Y$ distributed?}\spc{6}
+
+
+\intermediatesubproblem{Let $X_1 \sim \lognormnot{\mu_1}{\sigsq_1}$, $X_2 \sim \lognormnot{\mu_2}{\sigsq_2}, \ldots, X_n \sim \lognormnot{\mu_n}{\sigsq_n}$ all independent of each other and $Y=\prod_{i=1}^n X_i$. How is $Y$ distributed? Use a heuristic argument. No need to actually change variables. Hint: how are the $e^{X_i}$'s distributed?}\spc{4}
+
+%\intermediatesubproblem{The average return of the S\&P 500 stock index since 1928 is 11.4\% and the standard deviation is 19.7\%. Assume for the purposes of this problem that percentage returns is normally distributed (even though it is not true in practice). If you put \$1,000 into the stock market, what is the probability you have \$5,000 after 10 years? The \texttt{R} function you need is \texttt{plnorm}.}\spc{6}
+
+
+%\easysubproblem{Using $Z_1,  Z_2, \ldots \iid \stdnormnot$, find a function $g$ s.t. $g(Z_1,  Z_2, \ldots, k_1, \ldots) \sim \chisq{k}$ where $k_1, \ldots$ represents constants.}\spc{3}
+
+%\easysubproblem{Let $X \sim \chisq{k}$, find $\expe{X}$ using the fact that $X = Z_1^2 + Z_2^2 + \ldots + Z_k^2$ where $Z_1,  Z_2, \ldots, Z_k \iid \stdnormnot$.}\spc{3}
+
+\easysubproblem{Let $X \sim \chisq{k} = \gammanot{\overtwo{k}}{\half}$. Find the PDF of $X$ by making the correct substitutions in the gamma PDF and simplifying.}\spc{3}
+
+
+\easysubproblem{Using $Z_1,  Z_2, \ldots \iid \stdnormnot$, the function $g$ s.t. $g(Z_1,  Z_2, \ldots)  \sim \chisq{k}$ where $k \in \naturals$ is a constant is given below:
+
+\ingreen{
+\beqn
+g(Z_1,  Z_2, \ldots) = Z_1^2 + Z_2^2 + \ldots + Z_k^2 \sim \chisq{k}
+\eeqn
+
+This serves as a model answer for the next three problems.}
+}
+
+
+%\easysubproblem{Let $X \sim F_{k_1,k_2}$, find the kernel of $f_X(x)$.}\spc{3}
+
+\intermediatesubproblem{Using $Z_1,  Z_2, \ldots \iid \stdnormnot$, find a function $g$ s.t. $g(Z_1,  Z_2, \ldots)  \sim T_{k}$ where $k \in \naturals$ is a constant.}\spc{2.5}
+
+
+\intermediatesubproblem{Using $Z_1,  Z_2, \ldots \iid \stdnormnot$,  find a function $g$ s.t. $g(Z_1,  Z_2, \ldots) \sim F_{k_1,k_2}$ where $k_1, k_2 \in \naturals$ are constants.}\spc{2.5}
+
+
+\easysubproblem{Using $Z_1,  Z_2, \ldots \iid \stdnormnot$, find a function $g$ s.t. $g(Z_1,  Z_2, \ldots) \sim \cauchynot{0}{1}$.}\spc{0.5}
+
+%\easysubproblem{Let $X \sim T_k$, find the kernel of $f_X(x)$.}\spc{3}
+
+\easysubproblem{Let $W^2 \sim F_{1, k}$ where $k \in \naturals$. $W \sim$}\spc{-0.5}
+
+\hardsubproblem{Let $W^2 \sim F_{1, k}$ where $k \in \naturals$. Find the PDF of $W$, $f_W(w)$, by using transformation of variables. I've started you off below.}
+
+\ingreen{
+\beqn
+&& F_{W^2}(w^2) = \prob{W^2 \leq w^2} = \prob{W \in \bracks{-w,w}} = F_W(w) - F_W(-w) \\
+&&\Rightarrow \frac{d}{dw}\bracks{F_{W^2}(w^2) } = \frac{d}{dw}\bracks{F_W(w) - F_W(-w)}
+\eeqn
+}
+~\spc{10}
+
+\extracreditsubproblem{Show that the PDF of $X \sim T_k$, converges to the PDF of $Z \sim \stdnormnot$ when $k \rightarrow \infty$. Hint: use Stirling's approximation.}\spc{10}
+
+\hardsubproblem{Let $X \sim F_{a,b}$. Show that $\frac{a}{b}X \sim $ BetaPrime$(a/2, b/2)$ where $a,b > 0$.}\spc{10}
+
+
+
+%\easysubproblem{Let $X \sim \cauchynot{0}{1}$, find the kernel of $f_X(x)$.}\spc{3}
+
+
+%\easysubproblem{State Cochran's Theorem's assumptions and results.}\spc{2}
+%
+%\easysubproblem{Assume $Z_1,  Z_2, \ldots \iid \stdnormnot$, prove $S^2_n \sim \chisq{n-1}$ using Cochran's theorem.}\spc{20}
+
+%\easysubproblem{Let $X \sim \cauchynot{0}{1}$, prove that $\expe{X}$ does not exist without using its ch.f.}\spc{7}
+
+
+\end{enumerate}
+
+\problem{The $\chi^2$ r.v. within Cochran's Theorem.}
+
+\begin{enumerate}
+
+%\easysubproblem{Given $\Xoneton \iid f(\mu,\sigsq)$, a density with finite variance, state the classic estimator $S^2$ (a r.v.) and the estimate (a scalar value) for $\sigsq$, the variance of the $X$'s.}\spc{1}
+
+%\hardsubproblem{[MA] Prove $\expe{S^2} = \sigsq$. The answer is online but try to do it yourself. (This property is called \qu{unbiasedness} in a statistical inference context.}\spc{12}
+
+
+%\easysubproblem{Given $\Xoneton \iid f(\mu,\sigsq)$, a density with finite variance, state the classic estimator $S$ (a r.v.) and the estimate (a scalar value) for $\sigma$, the standard error of the $X$'s.}\spc{3}
+
+%\extracreditsubproblem{Prove this estimator is \textit{biased} i.e $\expe{S} \neq \sigma$.}\spc{12}
+
+\easysubproblem{State Cochran's Theorem (the assumptions and results).}\spc{4}
+
+\easysubproblem{Given $\Xoneton \iid \normnot{\mu}{\sigsq}$. Show that $\sum_{i=1}^n \squared{\frac{X_i - \mu}{\sigma}} \sim \chisq{n}$.}\spc{3}
+
+\easysubproblem{Let $Z_1 := \frac{X_1 - \mu}{\sigma}, \ldots, Z_n := \frac{X_n - \mu}{\sigma}$. We know that $Z_1, \ldots, Z_n  \iid \stdnormnot$ and let the column vector r.v. $\Z := \bracks{Z_1 ~ \ldots ~ Z_n}^\top$. Express $\sum_{i=1}^n \squared{\frac{X_i - \mu}{\sigma}}$ in vector notation using $\Z$.}\spc{1}
+
+\intermediatesubproblem{Express $\sum_{i=1}^n \squared{\frac{X_i - \mu}{\sigma}}$ as a quadratic form. What is the matrix that determines this quadratic form? (This is the matrix sandwiched between the two vectors).}\spc{1}
+
+
+
+\easysubproblem{What is the rank of this determining matrix?}\spc{1}
+
+\easysubproblem{When computing $\sum_{i=1}^n \squared{\frac{X_i - \mu}{\sigma}}$, how many \href{https://en.wikipedia.org/wiki/Degrees_of_freedom_(statistics)}{independent pieces of information} AKA \qu{degrees of freedom} go into the calculation?}\spc{1}
+
+
+\easysubproblem{Show that $\sum_{i=1}^n \squared{\frac{X_i - \mu}{\sigma}} = \frac{(n-1)S^2}{\sigsq} + \frac{n(\Xbar - \mu)^2}{\sigsq}$.}\spc{4}
+
+
+\easysubproblem{Show that $\frac{n(\Xbar - \mu)^2}{\sigsq} \sim \chisq{1}$.}\spc{4}
+
+%\easysubproblem{Express $\frac{n(\Xbar - \mu)^2}{\sigsq}$ in vector notation.}\spc{4}
+
+\easysubproblem{Express $\frac{n(\Xbar - \mu)^2}{\sigsq}$ as a quadratic form. What is the matrix that determines this quadratic form? Call it $B_2$.}\spc{4}
+
+\easysubproblem{What is the rank of the determining matrix?}\spc{1}
+
+%\easysubproblem{When computing $\frac{n(\Xbar - \mu)^2}{\sigsq}$, how many \href{https://en.wikipedia.org/wiki/Degrees_of_freedom_(statistics)}{independent pieces of information} go into the calculation?}\spc{1}
+
+\easysubproblem{Express $\frac{(n-1)S^2}{\sigsq}$ in vector notation.}\spc{4}
+
+\intermediatesubproblem{Express $\frac{(n-1)S^2}{\sigsq}$ as a quadratic form. What is the matrix that determines this quadratic form? Call it $B_1$.}\spc{4}
+
+\intermediatesubproblem{What is the rank of the determining matrix?}\spc{0}
+
+\easysubproblem{When computing $\frac{(n-1)S^2}{\sigsq}$, how many \href{https://en.wikipedia.org/wiki/Degrees_of_freedom_(statistics)}{independent pieces of information} go into the calculation?}\spc{1}
+
+\easysubproblem{What is $B_1 + B_2$?}\spc{0}
+
+
+\easysubproblem{What is rank$(B_1)~+~$rank$(B_2)$?}\spc{0}
+
+\easysubproblem{Are the conditions of Cochran's Theorem satisfied so that we can conclude that $\frac{(n-1)S^2}{\sigsq} \sim \chisq{n-1}$ and that $\frac{(n-1)S^2}{\sigsq}$ is independent of $\frac{n(\Xbar - \mu)^2}{\sigsq}$? Yes or no.}\spc{0}
+
+%\extracreditsubproblem{Prove Cochran's Theorem. Do on a separate sheet.}
+
+
+\hardsubproblem{[MA] What is $B_1B_2$? Why do you think this should be?}\spc{3}
+
+%\intermediatesubproblem{Using your previous answers, show that $\frac{\Xbar - \mu}{\oversqrtn{S}} \sim T_{n-1}$.}\spc{7}
+
+
+\easysubproblem{Make up a definition of \qu{degrees of freedom} in English.}\spc{1}
+
+\intermediatesubproblem{Put it all together: what is the distribution of $S^2$?}\spc{1}
+
+%\hardsubproblem{[MA] What is $\expe{S}$?}\spc{5}
+%
+%\hardsubproblem{[MA] Create a new estimator $S_0$ that is unbiased for $\sigma$ i.e. ($\expe{S} = \sigma$). Hint: use $S$ but multiply by intelligent constants.}\spc{3}
+
+\end{enumerate}
+
+\problem{We will now practice multivariate change of variables where $\Y = \bv{g}(\X)$ where $\X$ denotes a vector of $k$ continuous r.v.'s and $\bv{g} : \reals^k \rightarrow \reals^k$ and is 1:1.}
+
+\begin{enumerate}
+
+\easysubproblem{State the formula for the PDF of $\Y$.}\spc{0.5}
+
+
+\intermediatesubproblem{Demonstrate that the formula for the PDF of $\Y$ reduces to the univariate change of variables formula if the dimensions of $\Y$ and $\X$ are 1. }\spc{2}
+
+
+\easysubproblem{State the integral formula for the PDF of $R = \frac{X_1}{X_2}$ if $X_1$ and $X_2$ are dependent.}\spc{1}
+
+\easysubproblem{State the integral formula for the PDF of $R = \frac{X_1}{X_2}$ if $X_1$ and $X_2$ are independent.}\spc{1}
+
+\easysubproblem{State the integral formula for the PDF of $R = \frac{X_1}{X_2}$ if $X_1$ and $X_2$ are independent and have positive supports.}\spc{1}
+
+\easysubproblem{Show that $R = \frac{X_1}{X_2} \sim \beta'(\alpha, \beta)$, the beta prime distribution, if $X_1 \sim \gammadist{\alpha}{1}$ independent of $X_2 \sim \gammadist{\beta}{1}$. Be careful to include the indicator function for $r$ in the final result.}\spc{7}
+
+
+\hardsubproblem{Find an integral formula for the PDF of $E = X_1^{X_2}$ if $X_1$ and $X_2$ are dependent.}\spc{10}
+
+
+
+\hardsubproblem{Find an integral formula for the PDF of $R = \frac{X_1}{X_1 + X_2}$ if $X_1$ and $X_2$ are dependent.}\spc{10}
+
+\easysubproblem{State the integral formula for the PDF of $R = \frac{X_1}{X_1 + X_2}$ if $X_1$ and $X_2$ are independent.}\spc{1}
+
+\intermediatesubproblem{Find an integral formula for the PDF of $R = \frac{X_1}{X_1 + X_2}$ if $X_1$ and $X_2$ are independent and have positive supports.}\spc{2}
+
+\hardsubproblem{[MA] Find the simplest integral formula you can for the PDF of $Q = \frac{X_1}{X_2}e^{X_3}$ where $X_1, X_2, X_3$ are dependent continuous r.v.'s.}\spc{6}
+
+
+\end{enumerate}
+\end{document}
+
+
+
+
+%\easysubproblem{Prove $\expe{a\X + \c} = a\muvec + \c$ where the following are constants: $a \in \reals, \c \in \reals^K$.}\spc{2}
+%
+%\easysubproblem{Prove $\var{\c^\top \X} = \c^\top \Sigma \c$ where $\c \in \reals^K$, a constant and $\Sigma := \var{\X}$, the variance-covariance matrix of the vector r.v. $\X$. This is marked easy since it's in the notes.}\spc{8}
+
+%\easysubproblem{Why is $\c^\top \Sigma \c$ called a \qu{quadratic form?} Read about it on wikipedia.}\spc{2}
+
+
+
+
+
+
+
+
+
+
+
+
+
+%\easysubproblem{Prove the PMF of $X \sim \poisson{\lambda}$ using the limit as $n \rightarrow \infty$ and let $p = \overn{\lambda}$.}\spc{9}
+%
+%
+%\hardsubproblem{Let $X_1 \sim \poisson{\lambda_1}$ independent of $X_2 \sim \poisson{\lambda_2}$. Find the PMF of the sum of $T = X_1 + X_2$ using a convolution.}\spc{12}
+
+%\hardsubproblem{Let $X \sim \poisson{\lambda}$ independent of $Y \sim \poisson{\lambda}$. Find an expression for $\prob{X > Y}$ \emph{as best as you are able to answer}. Part of this exercise is identifying where you cannot go any further.}\spc{9}
+
+
+%\problem{We will get some practice with the simple transformation $Y = g(X) = -X$ for discrete r.v.'s.}
+%
+%
+%\begin{enumerate}
+%
+%\easysubproblem{If $X \sim \bernoulli{p}$, find the PMF of $Y = -X$. Make sure the PMF is valid $\forall y \in \reals$.}\spc{1}
+%
+%\easysubproblem{If $X \sim \negbin{r}{p}$, find the PMF of $Y = -X$. Make sure the PMF is valid $\forall y \in \reals$.}\spc{1}
+%
+%\intermediatesubproblem{If $\X \sim \multinomial{n}{\p}$, find the JMF of $\Y = -\X$. Make sure the JMF is valid $\forall \y \in \reals^K$.}\spc{1}
+%
+%\end{enumerate}
+%
+%\problem{We will now practice the conditional-on-total distributions.}
+%
+%\begin{enumerate}
+%
+%\hardsubproblem{Let $X_1, X_2 \iid \geometric{p}$ and $T = X_1 + X_2$. Find the PMF of $X_1~|~T = t$ and notate it using a brand name random variance e.g. binomial, poisson, etc. The answer may surprise you. Conditional probability is very weird!}\spc{7}
+%
+%
+%\intermediatesubproblem{[MA] Let $X_1, X_2 \iid \binomial{n}{p}$ and $T = X_1 + X_2$. Show that $X_1~|~T = t$ is hypergeometric. You can find information about this r.v. online. Note we did not / will not study the hypergeometric further and it will not be covered on any exams.}\spc{7}
+%\end{enumerate}
+%
+%\problem{We will now go over the Skellam distribution. In class we derived the PMF of $D = X_1 - X_2$ where $X_1, X_2 \iid \poisson{\lambda}$. This was first published in 1937. This was a special case of general Skellam distribution which is defined below:
+%
+%\beqn
+%D \sim \text{Skellam}(\lambda_1, \lambda_2) := e^{-(\lambda_1 + \lambda_2)} \tothepow{\frac{\lambda_1}{\lambda_2}}{d/2} I_{|d|}(2 \sqrt{\lambda_1\lambda_2})
+%\eeqn
+%
+%\noindent where $I_x(a)$ denotes the \href{https://en.wikipedia.org/wiki/Bessel_function\#Modified_Bessel_functions}{modified Bessel function of the first kind} defined as:
+%
+%\beqn
+%I_{\alpha}(\lambda) := \sum_{x = 0}^\infty \frac{\tothepow{\overtwo{\lambda}}{2x + \alpha}}{x! (x + \alpha)!}
+%\eeqn
+%
+%\noindent when $\alpha \in \naturals_0$.
+%}\vspace{0.5cm}
+%
+%\begin{enumerate}
+%
+%\easysubproblem{Show that for $\lambda_1 = \lambda_2$, we get the formula derived in class i.e. the special case of the Skellam derived in 1937.}\spc{1}
+%
+%
+%\intermediatesubproblem{[MA] If $D = X_1 - X_2$ where $X_1 \sim \poisson{\lambda_1}$ and $X_2 \sim \poisson{\lambda_2}$ where $X_1$ and $X_2$ are independent, show that $D \sim \text{Skellam}(\lambda_1, \lambda_2)$. You will be essentially redoing the proof published by John Gordon Skellam in 1946.}\spc{10}
+%
+%
+%\easysubproblem{The Yankees play the Mets. Assume the number of runs scored is Poisson with rate parameter $\lambda_Y = 7$ for the Yankees and rate parameter $\lambda_M = 5$ for the Mets. Assume the number of runs scored by the Yankees is independent of the number of runs scored by the Mets. What score difference is expected in this baseball game?}\spc{2}
+%
+%\easysubproblem{Find the probability the Mets beat the Yankees by 3. Leave in notation. Do not compute an actual number.}\spc{2}
+%
+%%\easysubproblem{[MA] Figure out a way to compute the probability in the previous question to two significant figures.}\spc{1}
+%
+%
+%\easysubproblem{Write an expression to compute the probability the Mets beat the Yankees. Leave in notation. Do not compute an actual number.}\spc{1}
+%
+%\end{enumerate}
+
+
+
+%\problem{We will now practice the conditional-on-total distributions.}
+%
+%\begin{enumerate}
+%
+%\hardsubproblem{Let $X_1, X_2 \iid \geometric{p}$ and $T = X_1 + X_2$. Find the PMF of $X_1~|~T = t$ and notate it using a brand name random variance e.g. binomial, poisson, etc. The answer may surprise you. Conditional probability is very weird!}\spc{7}
+%
+%
+%\intermediatesubproblem{[MA] Let $X_1, X_2 \iid \binomial{n}{p}$ and $T = X_1 + X_2$. Show that $X_1~|~T = t$ is hypergeometric. You can find information about this r.v. online. Note we did not / will not study the hypergeometric further and it will not be covered on any exams.}\spc{7}
+%\end{enumerate}
+
+
+
+
+%\intermediatesubproblem{Find an upper bound for the last quartile (i.e. the 75\%ile) of a positive r.v. $X$ as a function of its mean.}\spc{5}
