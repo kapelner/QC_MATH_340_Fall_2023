@@ -1,0 +1,285 @@
+\documentclass[12pt]{article}
+
+\include{preamble}
+
+\newtoggle{professormode}
+\toggletrue{professormode} %STUDENTS: DELETE or COMMENT this line
+
+
+
+\title{MATH 340/640 Fall \the\year~ Homework \#7}
+
+\author{Professor Adam Kapelner} %STUDENTS: write your name here
+
+\iftoggle{professormode}{
+\date{(not officially due)\\ \vspace{0.5cm} \small (this document last updated \today ~at \currenttime)}
+}
+
+\renewcommand{\abstractname}{Instructions and Philosophy}
+
+\begin{document}
+\maketitle
+
+\iftoggle{professormode}{
+\begin{abstract}
+The path to success in this class is to do many problems. Unlike other courses, exclusively doing reading(s) will not help. Coming to lecture is akin to watching workout videos; thinking about and solving problems on your own is the actual ``working out.''  Feel free to \qu{work out} with others; \textbf{I want you to work on this in groups.}
+
+Reading is still \textit{required} --- read about the concepts we discussed in class online. For this homework set, review the previous random variables and read about truncations, the Weibull, the ParetoI, the law of iterated expectation, the law of total variance, joint ch.f's and the multivariate normal distribution.
+
+The problems below are color coded: \ingreen{green} problems are considered \textit{easy} and marked \qu{[easy]}; \inorange{yellow} problems are considered \textit{intermediate} and marked \qu{[harder]}, \inred{red} problems are considered \textit{difficult} and marked \qu{[difficult]} and \inpurple{purple} problems are extra credit. The \textit{easy} problems are intended to be ``giveaways'' if you went to class. Do as much as you can of the others; I expect you to at least attempt the \textit{difficult} problems. \qu{[MA]} are for those registered for 621 and extra credit otherwise.
+
+This homework is worth 100 points but the point distribution will not be determined until after the due date. See syllabus for the policy on late homework.
+
+Up to 5 points are given as a bonus if the homework is typed using \LaTeX. Links to instaling \LaTeX~and program for compiling \LaTeX~is found on the syllabus. You are encouraged to use \url{overleaf.com}. If you are handing in homework this way, read the comments in the code; there are two lines to comment out and you should replace my name with yours and write your section. The easiest way to use overleaf is to copy the raw text from hwxx.tex and preamble.tex into two new overleaf tex files with the same name. If you are asked to make drawings, you can take a picture of your handwritten drawing and insert them as figures or leave space using the \qu{$\backslash$vspace} command and draw them in after printing or attach them stapled.
+
+The document is available with spaces for you to write your answers. If not using \LaTeX, print this document and write in your answers. I do not accept homeworks which are \textit{not} on this printout. Keep this first page printed for your records.
+
+\end{abstract}
+
+\thispagestyle{empty}
+\vspace{1cm}
+NAME: \line(1,0){380}
+\clearpage
+}
+
+
+\problem{We will acquaint ourselves with finding modes of distributions.}
+
+\begin{enumerate}
+
+\easysubproblem{Let $X \sim \text{InvGamma}(\alpha, \beta) := \frac{\beta^\alpha}{\Gamma\parens{\alpha}} x^{-\alpha - 1} e^{-\frac{\beta}{x}} \indic{x \in (0, \infty)}$. Find Mode[$X$].}\spc{4}
+
+\intermediatesubproblem{Let $X \sim T_{k}$. Let $Y = \mu + \sigma X$ where $\mu \in \reals$ and $\sigma > 0$. We proved on midterm II that $Y \sim T_{k}(\mu, \sigsq)$ with density:
+
+\beqn
+f_Y(y) = \frac{\Gamma\parens{\overtwo{k+1}}}{\sqrt{\pi k \sigsq} \Gamma\parens{\overtwo{k}}} \tothepow{1 + \frac{(y-\mu)^2}{k\sigsq}}{-\overtwo{k+1}}
+\eeqn
+
+which is called the \qu{location-scale T-distribution}. Find Mode[$Y$].
+}\spc{5}
+
+
+
+\end{enumerate}
+\problem{We will acquaint ourselves with truncations.}
+
+\begin{enumerate}
+
+\intermediatesubproblem{Let $Z \sim \stdnormnot$ and $Y = Z\indic{|Z|>2}$. Find $f_Y(y)$. Note that $\prob{|Z|>2} \approx 5\%$.}\spc{2}
+
+
+\easysubproblem{If $X \sim \text{ParetoI}(k, \lambda)$ and $c > 0$. Prove $Y = X\indic{X > k +c}$ is also ParetoI-distributed and find its density.}\spc{6}
+
+\end{enumerate}
+
+
+\problem{We will derive some properties of the ParetoI distribution.}
+
+\begin{enumerate}
+
+\easysubproblem{Using the formula we derived in class for $\lambda$ as a ratio of logs, find the ParetoI distribution corresponding to the 80-20 rule. The value of $k$ doesn't matter; let $k=1$.}\spc{3}
+
+\easysubproblem{Let $X \sim \text{ParetoI}(\lambda, 1)$ where the value of $\lambda$ was found in the previous question. Find $a := Q[X, 0.8]$, the 80th \%ile of this distribution.}\spc{3}
+
+\easysubproblem{Using the formula we derived in class for $\lambda$ as a ratio of logs, find the ParetoI distribution corresponding to the 99-1 rule. The value of $k$ doesn't matter so let $k=1$.}\spc{3}
+
+
+\easysubproblem{Plot the PDF from (b) in the range $x \in \bracks{0, 20}$ and shade in the area where $x <a$ in blue and $x \geq a$ in red. Label the axes appropriately. \inblue{This problem is done for you.}}
+
+\begin{figure}[htp]
+\centering
+\includegraphics[width=5in]{pareto_density.pdf}
+\end{figure}
+
+\easysubproblem{Plot the PDF from (b) times $x$ (this is the total amount of land owned by people up to land amount $x$) in the range $x \in \bracks{0, 20}$ and shade in the area where $x <a$ in blue and $x \geq a$ in red. Label the axes appropriately. \inblue{This problem is done for you.}}
+
+\begin{figure}[htp]
+\centering
+\includegraphics[width=5in]{pareto_density_times_x.pdf}
+\end{figure}
+
+\easysubproblem{Calculate the blue region's area in both plots and compare the blue region in these two plots. What is this relationship called? \inblue{This problem is done for you.}}
+
+\inblue{Although the plot of the density has 80\% of the total area in the region where $x<a$, the plot of the total amount of land owned has only 20\% of the total area in the region where $x<a$. This is the 80-20 rule.}
+
+
+\intermediatesubproblem{If human wealth follows the 99-1 rule, write a few sentences about what this means.}\spc{3}
+
+\end{enumerate}
+
+
+\problem{We will acquaint ourselves with the Weibull modulus.}
+
+\begin{enumerate}
+
+\easysubproblem{Draw the densities of the three types of Weibull distributions and indicate the set of the Weibull modulus $k$ below each graph.}\spc{6}
+
+\easysubproblem{Let $X \sim \text{Weibull}(k, \lambda)$. If $k = 1$, prove that this Weibull is an exponential distribution with rate paramter $\lambda$ and then prove that it exhibits the memorlessness property.}\spc{4}
+
+\hardsubproblem{Let $X \sim \text{Weibull}(k, \lambda)$. If $k > 1$, prove that $\cprob{X > x + c}{X > c} < \prob{X > x}$ for all $x, c > 0$. \inblue{This problem is done for you below.}}
+
+We proved in class that $\cprob{X > x + c}{X > c} = e^{\lambda^k (c^k - (x+c)^k)}$ and $\prob{X > x} = e^{-(\lambda x)^k}$. This means what we want to show is equivalent to showing:
+
+\beqn
+\frac{e^{\lambda^k (c^k - (x+c)^k)}}{e^{-(\lambda x)^k}} = e^{\lambda^k (c^k +x^k - (x+c)^k)} < 1
+\eeqn
+
+Taking the log of both sides we wish to show that $\lambda^k (c^k +x^k - (x+c)^k) < 0$. We know that $\lambda^k > 0$ since $\lambda, k > 0$ due to the parameter space of $X$. So now we need to show that
+
+\beqn
+c^k +x^k < (x+c)^k 
+\eeqn
+
+We now multiply both sides by $x^{-k}$ and define $d := c/x$.  We know $d>0$ since both $x,c>0$. This gives us:
+
+\beqn
+1 + d^k < (1 + d)^k
+\eeqn
+
+Now we let $k = 1 + \beta$. Since $k > 1$, we know $\beta$ is positive. Using this notation, we want to show
+
+\beqn
+1 + dd^\beta < (1+d)(1+d)^\beta
+\eeqn
+
+Expanding gives us
+
+\bneqn\label{eq:weibull_inequality}
+1 + dd^\beta < (1+d)^\beta + d(1+d)^\beta
+\eneqn
+
+The inequality $a_1 + b_1 < a_2 + b_2$ if $a_1 < b_1$ and $a_2 < b_2$. This is true here as
+Since 
+
+\beqn
+1 < (1+d)^\beta ~~\Rightarrow~~ 0 < \beta \natlog{1+d}
+\eeqn
+
+and $\beta > 0$ and $\natlog{1+d} > 0$ as $d>0$. And also
+
+\beqn
+dd^\beta < d(1+d)^\beta ~~\Rightarrow~~ d^\beta < (1+d)^\beta ~~\Rightarrow~~  \beta \natlog{d} < \beta \natlog{1+d}  ~~\Rightarrow~~  \natlog{d} < \natlog{1+d}.
+\eeqn
+
+
+\easysubproblem{Let $X \sim \text{Weibull}(k, \lambda)$. If $k \in (0, 1)$, prove that $\cprob{X > x + c}{X > c} > \prob{X > x}$ for all $x, c > 0$. \inblue{This problem is done for you below.}}
+
+This proof follows everything in the previous. We begin at Inequality~\ref{eq:weibull_inequality} which will have the opposite inequality.
+
+\beqn
+1 + dd^\beta > (1+d)^\beta + d(1+d)^\beta
+\eeqn
+
+Now we let $k = 1 + \beta$. Since $k \in (0, 1)$, we know $\beta$ is negative. The inequality $a_1 + b_1 > a_2 + b_2$ if $a_1 > b_1$ and $a_2 > b_2$. This is true here as: 
+
+\beqn
+1 > (1+d)^\beta ~~\Rightarrow~~ 0 > \beta \natlog{1+d}
+\eeqn
+
+as $\beta <0$ and $\natlog{1+d} > 0$ as $d>0$. And also
+
+\beqn
+dd^\beta > d(1+d)^\beta ~~\Rightarrow~~ d^\beta > (1+d)^\beta ~~\Rightarrow~~  \beta \natlog{d} > \beta \natlog{1+d}  ~~\Rightarrow~~  \natlog{d} < \natlog{1+d}.
+\eeqn
+
+where the inequality is flipped in the last step as we divide both sides by $\beta$ which is negative.
+
+\easysubproblem{Let $X \sim \text{Weibull}(k, \lambda)$ where $k > 1$. Provide some real life examples that could be modeled by this rv.}\spc{3}
+
+\easysubproblem{Let $X \sim \text{Weibull}(k, \lambda)$ where $k \in (0, 1)$. Provide some real life examples that could be modeled by this rv.}\spc{3}
+
+\end{enumerate}
+
+
+\problem{We will acquaint ourselves with the Weibull modulus.}
+
+\begin{enumerate}
+
+\easysubproblem{State the law of iterated expectation.}\spc{1}
+
+\intermediatesubproblem{If $X \sim \gammanot{\alpha}{\beta}$ and $Y\,|\,X =x \sim \exponential{x}$, find $\expe{Y}$ using the law of iterated expecation.}\spc{3}
+
+\intermediatesubproblem{This is a canonical problem in econometrics. If $X \sim \normnot{\mu}{\tau^2}$ and $Y\,|\,X =x \sim \normnot{a + bx}{\sigsq}$, where $a, b \in \reals$, find $\expe{Y}$ using the law of iterated expecation.}\spc{3}
+
+\easysubproblem{State the law of total variance (which is also called the \qu{variance decomposition formula}).}\spc{3}
+
+
+\intermediatesubproblem{[MA] If $X \sim \gammanot{\alpha}{\beta}$ and $Y\,|\,X =x \sim \exponential{x}$, find $\var{Y}$ using the law of total variance.}\spc{4}
+
+\intermediatesubproblem{This is a canonical problem in econometrics. If $X \sim \normnot{\mu}{\tau^2}$ and $Y\,|\,X =x \sim \normnot{a + bx}{\sigsq}$, where $a, b \in \reals$, find $\var{Y}$ using the law of total variance.}\spc{3}
+
+\end{enumerate}
+
+
+\problem{We will learn to sample a multinomial iteratively. Imagine a bag of fruits with 4 apples, 7 bananas, 6 cantaloupes.}
+
+\begin{enumerate}
+
+\easysubproblem{Review for the final: imagine sampling from the bag 37 times with replacement and tallying the number of apples as $x_1$, the number of bananas as $x_2$ and the number of cantaloupes as $x_3$. How is the rv $\X := \bracks{X_1~X_2~X_3}^\top$ distributed?}\spc{1}
+
+
+\easysubproblem{What is the distribution of $X_1$?}\spc{1}
+
+\easysubproblem{What is the distribution of $X_2\,|\,X_1 = x_1$?}\spc{1}
+
+\intermediatesubproblem{What is the distribution of $X_3\,|\,X_2 = x_2, X_1 = x_1$?}\spc{1}
+
+\easysubproblem{Using your answers to parts (a-c), write an iterative algorithm that can draw samples from $\X$.}\spc{6}
+
+
+
+\end{enumerate}
+
+
+\problem{These questions are about joint characteristic functions and the multinomial distribution.}
+
+\begin{enumerate}
+
+\easysubproblem{State the definition of the joint ch.f.}\spc{2}
+
+\easysubproblem{State properties 0-4 for joint ch.f's.}\spc{8}
+
+\easysubproblem{Prove property 5 for joint ch.f's.}\spc{5}
+
+
+\easysubproblem{Let $\X \sim \text{Multinom}(n, \p)$ which is a vector rv with $k$ dimensions. Find $\phi_{\X}$.}\spc{6}
+
+
+\easysubproblem{Find the distribution of $X_{17}$ using $\phi_{\X}$.}\spc{3}
+
+\intermediatesubproblem{[MA] Find $\cov{X_{17} X_{37}}{X_{53}}$.}\spc{6}
+
+\hardsubproblem{Let $\X$ be the multivariate Cauchy distribution with mean $\muvec$ and variance matrix $\bSigma$. It's characteristic function is $\phi_{\X} = e^{i\t^\top \muvec - \sqrt{\t^\top \bSigma \t}}$ (see 3.13 of \href{https://arxiv.org/pdf/2112.06472.pdf}{this paper} if you're interested). Find the distribution of $X_{17}$ using $\phi_{\X}$.}\spc{9}
+
+\end{enumerate}
+
+\problem{These questions are about the multivariate normal.}
+
+\begin{enumerate}
+
+\easysubproblem{Let $\X \sim \multnormnot{n}{\muvec}{\bSigma}$. Write the jdf of $\X$ below. What are the restrictions on $\bSigma$?}\spc{3}
+
+\intermediatesubproblem{Let $Z_1, \ldots, Z_n \iid \stdnormnot$ and let $\Z = \bracks{Z_1\,\ldots\,Z_n}^\top$. Show that $\Z$ is multivariate normal with $\muvec = \bv{0}_n$ and $\bSigma = \I_n$ using the jdf of the $\multnormnot{n}{\muvec}{\bSigma}$ rv.}\spc{3}
+
+\easysubproblem{Find $\phi_{\Z}$.}\spc{3}
+
+\easysubproblem{Let $A \in \reals^{m \times n}$ and $\mu \in \reals^n$. Let $\X = \muvec + A\Z$. Let $\bSigma := AA^\top$, Find $\phi_{\X}$.}\spc{3}
+
+\easysubproblem{Assuming for any vector rv $\Y$ with dimension $n$ that $\var{\muvec + \Y} = \var{\T}$ and $\var{A\Y} = A\var{\Y}A^\top$. Let $\X \sim \multnormnot{n}{\muvec}{\bSigma}$.  Show that $\var{\X} = \bSigma$.}\spc{3}
+
+\easysubproblem{Define the Mahalanobis distance. How is it distributed?}\spc{1}
+
+\easysubproblem{Let $\X \sim \multnormnot{n}{\muvec}{\bSigma}$.  Find the distribution of $X_{17}$ using $\phi_{\X}$.}\spc{3}
+
+\hardsubproblem{Let $\X \sim \multnormnot{n}{\muvec}{\bSigma}$.  Find the distribution of $\bracks{X_{17} \, X_{37}}^\top$ using $\phi_{\X}$.}\spc{5}
+
+\hardsubproblem{Let $\X \sim \multnormnot{n}{\muvec}{\bSigma}$.  Let $B \in \reals^{m \times n}$ and $\c \in \reals^m$. Find the distribution of $\Y = B\X + \c$.}\spc{4}
+
+\hardsubproblem{[MA] Are there any restrictions on $\muvec, \c, B, \bSigma$ in the previous question to have the result you found?}\spc{5}
+
+\end{enumerate}
+
+
+\end{document}
+
+
