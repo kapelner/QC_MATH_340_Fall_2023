@@ -1,0 +1,84 @@
+\documentclass[12pt]{article}
+
+\include{preamble}
+
+\newcommand{\instr}{\small Your answer will consist of a lowercase string (e.g. \texttt{aebgd}) where the order of the letters does not matter. \normalsize}
+
+\title{Math 340 / 640 Fall \the\year{} \\ Final Examination}
+\author{Professor Adam Kapelner}
+
+\date{December 18, \the\year{}}
+
+\begin{document}
+\maketitle
+
+\noindent Full Name \line(1,0){410}
+
+\thispagestyle{empty}
+
+\section*{Code of Academic Integrity}
+
+\footnotesize
+Since the college is an academic community, its fundamental purpose is the pursuit of knowledge. Essential to the success of this educational mission is a commitment to the principles of academic integrity. Every member of the college community is responsible for upholding the highest standards of honesty at all times. Students, as members of the community, are also responsible for adhering to the principles and spirit of the following Code of Academic Integrity.
+
+Activities that have the effect or intention of interfering with education, pursuit of knowledge, or fair evaluation of a student's performance are prohibited. Examples of such activities include but are not limited to the following definitions:
+
+\paragraph{Cheating} Using or attempting to use unauthorized assistance, material, or study aids in examinations or other academic work or preventing, or attempting to prevent, another from using authorized assistance, material, or study aids. Example: using an unauthorized cheat sheet in a quiz or exam, altering a graded exam and resubmitting it for a better grade, etc.\\
+\\
+\noindent I acknowledge and agree to uphold this Code of Academic Integrity. \\~\\
+
+\begin{center}
+\line(1,0){350} ~~~ \line(1,0){100}\\
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~signature~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ date
+\end{center}
+
+\normalsize
+
+\section*{Instructions}
+This exam is 110 minutes (variable time per question) and closed-book. You are allowed \textbf{three} 8.5'' $\times$ 11'' page (front and back) \qu{cheat sheets}, blank scrap paper (provided by the proctor) and a graphing calculator (which is not your smartphone). Please read the questions carefully. Within each problem, I recommend considering the questions that are easy first and then circling back to evaluate the harder ones. Show as much partial work as you can and justify each step. No food is allowed, only drinks. %If the question reads \qu{compute,} this means the solution will be a number otherwise you can leave the answer in \textit{any} widely accepted mathematical notation which could be resolved to an exact or approximate number with the use of a computer. I advise you to skip problems marked \qu{[Extra Credit]} until you have finished the other questions on the exam, then loop back and plug in all the holes. I also advise you to use pencil. The exam is 100 points total plus extra credit. Partial credit will be granted for incomplete answers on most of the questions. \fbox{Box} in your final answers. Good luck!
+
+\pagebreak
+
+
+\problem Below are mostly unrelated problems.
+
+\begin{enumerate}[(a)]
+
+
+
+\subquestionwithpoints{8} Let $X \sim \chisq{k}$. Find Mode[$X$] as a function of $k$ and indicate which values of $k$ are valid for the expression to be the mode.\spc{6}
+
+\subquestionwithpoints{10} Let $X \sim \text{BetaBinomial}(n, \alpha, \beta)$. Find $k(x)$.\spc{6}
+
+\subquestionwithpoints{8} Let $X \sim \text{Poisson}(\lambda)$ and $Y = X\indic{X > 0}$. Find $p_Y(y)$. Your answer must be only a function of $\lambda$ and $y$.\spc{6}
+
+\subquestionwithpoints{5} Let $X \sim \text{Weibull}(0.5, 0.5)$. Let $a = \prob{X > 17}$ and let $b = \cprob{X>37}{X>20}$. Circle the larger quantity: $a$ or $b$\spc{2}
+
+
+\subquestionwithpoints{13} Let $Y\,|\,X = x \sim \gammanot{x + 1}{\beta}$ and $X \sim \geometric{p}$. Find $f_Y(y)$ and identify it as one of the brand name rv's we studied and identify its parameter(s). Hint: $e^{a} = \displaystyle \sum_{i=1}^\infty \frac{a^i}{i!}$. Advice: leave this problem for last. \spc{30}
+
+\subquestionwithpoints{8} Let $Y\,|\,X = x \sim \exponential{x}$ and $X \sim \text{InvGamma}(\alpha,\beta)$. Find $\expe{Y}$.\spc{6}
+
+%\subquestionwithpoints{7} Let $\Xoneton \iid \betanot{\alpha}{\beta}$. Describe the steps used to create sample sample values $\xoneton$ using iid realizations from $U(0,1)$ denoted $u_1, \ldots, u_n$. \spc{6}
+
+\subquestionwithpoints{8} Let $X_1, \ldots, X_{37} \iid \text{ParetoI}(1,53)$. Let $X_{(k)}$ denote the $k$th order statistic. Find $f_{X_{(17)}}(x)$ as a function of $x$ only. \spc{6}
+
+%\subquestionwithpoints{10} Let $X_1, X_2 \iid \bernoulli{1/17}$. Prove $T = X_1 + X_2 \sim \binomial{2}{1/17}$ via a convolution computation. \spc{8}
+
+\subquestionwithpoints{7} Let $Y = aX + b$ where $a, b \in \reals$. From the definition of the ch.f., prove $\phi_{Y}(t) = e^{iub/a}\phi_X(u)$ where $u = at$. \spc{4}
+
+\pagebreak
+Let $\Z \sim \multnormnot{2}{\bv{0}_2}{\I_2}$. Let $\X = \muvec + A\Z$ where $\muvec = \twovec{1}{2}$ and $A = \twobytwomat{1}{-1}{-1}{0}$. Use these definitions for all of the following questions.
+
+
+\subquestionwithpoints{3} What is $S_{X_2}$? \spc{0}
+\subquestionwithpoints{6} Find $f_{\X}(\x)$ as a function of $x_1, x_2$ only. \spc{12}
+\subquestionwithpoints{8} Find $f_{X_2}(x)$ as a function of $x$ only. \spc{8}
+\subquestionwithpoints{7} Find $\phi_{\X}(\bv{t})$ as a function of $t_1, t_2$ only. \spc{10}
+
+\subquestionwithpoints{9} Compute $\expe{X_1 X_2}$ numerically. \spc{6}
+
+
+\end{enumerate}
+
+\end{document}

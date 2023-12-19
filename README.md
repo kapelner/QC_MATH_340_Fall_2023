@@ -50,7 +50,7 @@ My lecture notes are scanned in as PDF files contributed by myself.
 
 * Midterm I, Monday, Oct 2 [(exam)](https://github.com/kapelner/QC_MATH_340_Fall_2023/blob/main/exams/midterm1/midterm1.pdf) [(solutions)](https://github.com/kapelner/QC_MATH_340_Fall_2023/blob/main/exams/midterm1/midterm1_solutions.pdf)
 * Midterm II, Monday, Nov 6 [(exam)](https://github.com/kapelner/QC_MATH_340_Fall_2023/blob/main/exams/midterm2/midterm2.pdf) [(solutions)](https://github.com/kapelner/QC_MATH_340_Fall_2023/blob/main/exams/midterm2/midterm2_solutions.pdf)
-* Final, December TBA
+* Final, Monday, December 18 [(exam)](https://github.com/kapelner/QC_MATH_340_Fall_2023/blob/main/exams/final/final.pdf) [(solutions)](https://github.com/kapelner/QC_MATH_340_Fall_2023/blob/main/exams/final/final_solutions.pdf)
 
 ## Practice Exams
 
