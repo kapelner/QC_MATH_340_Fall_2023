@@ -167,11 +167,10 @@ f_{\X}(\x) &=& \oneoversqrt{4\pi^2} e^{-\half \parens{\twovec{x_1}{x_2} - \twove
 \subquestionwithpoints{8} Find $f_{X_2}(x)$ as a function of $x$ only. 
 
 \inred{
-Any subset of a multivariate normal is itself multivariate normal. A subset of dimension one is thus normal:
+Any subset of a multivariate normal is itself multivariate normal. A subset of dimension one is thus normal. It's mean corresponds to the index component of $\muvec$ and its variance corresponds to the index component of the diagonal of $\bSigma$, i.e.
 
 \beqn
-X_2 &\sim& \normnot{\mu_2 = 1}{\bSigma_{2,2} = 2} \\
-f_{X_2}(x) &=& \oneoversqrt{4\pi} e^{-\oneover{4} (x - 1)^2}
+X_2 &\sim& f_{X_2}(x)  = \normnot{\mu_2 = 2}{\bSigma_{2,2} = 1} = \oneoversqrt{2\pi} e^{-\oneover{2} (x - 2)^2}
 \eeqn
 }
 \pagebreak
@@ -195,7 +194,7 @@ f_{X_2}(x) &=& \oneoversqrt{4\pi} e^{-\oneover{4} (x - 1)^2}
 \cov{X_1}{X_2} &:=& \expe{X_1 X_2} - \expe{X_1}\expe{X_2} \\
 \expe{X_1 X_2} &=& \cov{X_1}{X_2} + \expe{X_1}\expe{X_2} \\
 &=& \bSigma_{1,2} + \mu_1\mu_2 \\
-&=& -1 + (1)(2) = 1
+&=& (-1) + (1)(2) = 1
 \eeqn
 }
 
