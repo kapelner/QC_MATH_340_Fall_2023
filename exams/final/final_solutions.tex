@@ -1,5 +1,9 @@
 \documentclass[12pt]{article}
-
+\usepackage{cancel} % ADDITIONAL PACKAGE FOR CANCELLATION
+\usepackage{tcolorbox}
+ % ADDITIONAL PACKAGE FOR BOXES
+\usepackage{derivative}
+ 
 \include{preamble}
 
 \newcommand{\instr}{\small Your answer will consist of a lowercase string (e.g. \texttt{aebgd}) where the order of the letters does not matter. \normalsize}
@@ -116,9 +120,53 @@ By the law of iterated expectation,
 \eeqn
 
 The last equality follows from letting $U = \frac{1}{X}$. Thus $U \sim \gammanot{\alpha}{\beta}$ and $\expesub{X}{\frac{1}{X}} = \frac{\alpha}{\beta}$.
+
+You can also compute the expectation above manually:
+
+\beqn
+\expesub{X}{\oneover{X}} &=& \int_{\reals} \dfrac{1}{x} f_X(x) \, dx = \int_{\reals} \dfrac{1}{x} \cdot \dfrac{\beta^{\alpha}}{\Gamma(\alpha)} \cdot x^{-\alpha - 1} \cdot e^{-\frac{\beta}{x}} \cdot  \indic{x \in (0, \infty)} \, dx\\
+&=& \dfrac{\beta^{\alpha}}{\Gamma(\alpha)} \int_0^{\infty} \left(\frac{1}{x}\right)^{\alpha + 2} e^{-\beta \frac{1}{x}} \, dx\\
+&=& \dfrac{\beta^{\alpha}}{\Gamma(\alpha)} \int_{\infty}^{0} u^{\alpha + 2} e^{-\beta u} \, \dfrac{-1}{u^2} \, du
+\qquad
+   \textup{Now let:}
+   \quad
+   \boxed{\begin{aligned}
+               u &= \dfrac{1}{x}, \, dx =  \dfrac{-1}{u^2} \, du
+       \end{aligned}} \\
+&=& \dfrac{\beta^{\alpha}}{\Gamma(\alpha)} \int_0^{\infty} u^{\alpha +1 - 1} e^{-\beta u} \, du \\
+&=&  \dfrac{\beta^{\alpha}}{\Gamma(\alpha)} \cdot  \dfrac{\Gamma(\alpha + 1)}{\beta^{\alpha + 1}} =  \dfrac{\cancel{\beta^{\alpha}}}{\cancel{\Gamma(\alpha)}} \cdot \dfrac{\alpha \cdot \cancel{\Gamma(\alpha)}}{\cancel{\beta^{\alpha}} \cdot \beta} = \dfrac{\alpha}{\beta}
+\eeqn
 }
 
 %\subquestionwithpoints{7} Let $\Xoneton \iid \betanot{\alpha}{\beta}$. Describe the steps used to create sample sample values $\xoneton$ using iid realizations from $U(0,1)$ denoted $u_1, \ldots, u_n$. 
+
+%==============================================
+% ALTERNATE SOLUTION: PART (F)
+%==============================================
+%\begin{tcolorbox}[colback=white, sharp corners]
+%\inpurple{
+%\underline{Alternate Solution}:
+%
+%\beqn
+%\expe{Y}  &=&  \expesub{X}{\cexpesub{Y}{Y}{X}}\\
+%&=& \expesub{X}{\oneover{X}}\\
+%&=& \int_{\reals} \dfrac{1}{x} f_X(x) \, dx\\
+%&=& \int_{\reals} \dfrac{1}{x} \cdot \dfrac{\beta^{\alpha}}{\Gamma(\alpha)} \cdot x^{-\alpha - 1} \cdot e^{-\frac{\beta}{x}} \cdot  \indic{x \in (0, \infty)} \, dx\\
+%&=& \dfrac{\beta^{\alpha}}{\Gamma(\alpha)} \int_0^{\infty} \left(\frac{1}{x}\right)^{\alpha + 2} e^{-\beta \frac{1}{x}} \, dx\\
+%&=& \dfrac{\beta^{\alpha}}{\Gamma(\alpha)} \int_{\infty}^{0} u^{\alpha + 2} e^{-\beta u} \, \dfrac{-1}{u^2} \, du
+%\qquad
+%   \textcolor{purple}{\textup{U-Sub:}}
+%   \quad
+%   \boxed{\begin{aligned}
+%               u &= \dfrac{1}{x}, \, dx =  \dfrac{-1}{u^2} \, du
+%       \end{aligned}} \\
+%&=& \dfrac{\beta^{\alpha}}{\Gamma(\alpha)} \int_0^{\infty} u^{\alpha +1 - 1} e^{-\beta u} \, du\\
+%&=& \dfrac{\beta^{\alpha}}{\Gamma(\alpha)} \cdot  \dfrac{\Gamma(\alpha + 1)}{\beta^{\alpha + 1}} =  \dfrac{\cancel{\beta^{\alpha}}}{\cancel{\Gamma(\alpha)}} \cdot \dfrac{\alpha \cdot \cancel{\Gamma(\alpha)}}{\cancel{\beta^{\alpha}} \cdot \beta} = \dfrac{\alpha}{\beta}
+%\eeqn
+%}
+%\end{tcolorbox}
+
+%===============================================
 
 \subquestionwithpoints{8} Let $X_1, \ldots, X_{37} \iid \text{ParetoI}(1,53)$. Let $X_{(k)}$ denote the $k$th order statistic. Find $f_{X_{(17)}}(x)$ as a function of $x$ only. 
 
@@ -164,6 +212,7 @@ f_{\X}(\x) &=& \oneoversqrt{(2\pi)^n \det{\bSigma}} e^{-\half (\x - \muvec)^\top
 f_{\X}(\x) &=& \oneoversqrt{4\pi^2} e^{-\half \parens{\twovec{x_1}{x_2} - \twovec{1}{2}}^\top \twobytwomat{1}{1}{1}{2} \parens{\twovec{x_1}{x_2} - \twovec{1}{2}}} \\
 \eeqn
 }
+
 \subquestionwithpoints{8} Find $f_{X_2}(x)$ as a function of $x$ only. 
 
 \inred{
@@ -172,7 +221,16 @@ Any subset of a multivariate normal is itself multivariate normal. A subset of d
 \beqn
 X_2 &\sim& f_{X_2}(x)  = \normnot{\mu_2 = 2}{\bSigma_{2,2} = 1} = \oneoversqrt{2\pi} e^{-\oneover{2} (x - 2)^2}
 \eeqn
+An alternative solution is to via the joint ch.f. from (l). By P9, we can marginalize,
+
+\beqn
+	\phi_{X_2}(t) = \phi_{\X} \parens{\twovec{0}{t}} =  e^{i2t_2 - \frac{1}{2}t^2} \implies X_2 \sim \normnot{\mu = 2}{\sigma^2 = 1} = f_{X_2}(x) = \oneoversqrt{2\pi} e^{-\oneover{2} (x - 2)^2}
+\eeqn
+
+Where the implication above is via P1.
 }
+
+
 \pagebreak
 
 
@@ -196,8 +254,31 @@ X_2 &\sim& f_{X_2}(x)  = \normnot{\mu_2 = 2}{\bSigma_{2,2} = 1} = \oneoversqrt{2
 &=& \bSigma_{1,2} + \mu_1\mu_2 \\
 &=& (-1) + (1)(2) = 1
 \eeqn
+
+An alternative solution uses the joint ch.f. from (l). First, we find $h_{t_1,t_2}(\t)$:
+
+\beqn
+	h_{t_1,t_2}(\t) &=& \pdv*{\left(\phi_{\X}(\t)\right)}{t_1,t_2}\\
+	&=& \pdv*{\left( e^{i (t_1 + 2t_2) -\half (2t_1^2 - 2 t_2 t_1 + t_2^2)} \right)}{t_1,t_2}\\
+	&=& \pdv*{\left((2i - t_1 + t_2) \cdot \phi_{\X}(\t)\right)}{t_1}\\
+	&=& \phi_{\X}(\t) + (2i - t_1 + t_2) \cdot (i - 2t_1 + t_2) \cdot \phi_{\X}(\t)
+\eeqn
+
+By property P0, 
+
+\beqn 
+ h_{t_1,t_2}(\bv{0}_2) = \phi_{\X}(\bv{0}_2) + (2i)(i)\cdot \phi_{\X}(\bv{0}_2) =  1 + 2i^2 = 1 - 2 = -1
+\eeqn
+
+Using the moment generation property P4,
+
+\beqn
+	\expe{X_1X_2} = \dfrac{h_{t_1,t_2}\left( \bv{0}_2 \right)}{i^2} =  \frac{-1}{-1} = 1
+\eeqn
+
 }
 
+%============================================
 
 \end{enumerate}
 
