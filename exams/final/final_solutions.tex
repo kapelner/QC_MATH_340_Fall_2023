@@ -106,7 +106,7 @@ f_Y(y) &=& \sum_{x \in \reals} f_{Y|X}(y,x) p_X(x) \\
 &=& p\beta e^{\beta y(1-p)- \beta y } \indic{y \in (0, \infty)} \\
 &=& p\beta e^{\beta y - \beta p y - \beta y } \indic{y \in (0, \infty)} \\
 &=& p\beta e^{- \beta p y} \indic{y \in (0, \infty)} \\
-&=& \exponential{p\beta} = \text{Weibull}(1, \beta p)\\
+&=& \exponential{p\beta} = \text{Weibull}(1, \beta p) = \gammanot{1}{\beta p}\\
 \eeqn
 }
 
@@ -250,7 +250,7 @@ Where the implication above is via P1.
 \inred{
 \beqn
 \cov{X_1}{X_2} &:=& \expe{X_1 X_2} - \expe{X_1}\expe{X_2} \\
-\expe{X_1 X_2} &=& \cov{X_1}{X_2} + \expe{X_1}\expe{X_2} \\
+\Rightarrow~\expe{X_1 X_2} &=& \cov{X_1}{X_2} + \expe{X_1}\expe{X_2} \\
 &=& \bSigma_{1,2} + \mu_1\mu_2 \\
 &=& (-1) + (1)(2) = 1
 \eeqn
@@ -258,10 +258,10 @@ Where the implication above is via P1.
 An alternative solution uses the joint ch.f. from (l). First, we find $h_{t_1,t_2}(\t)$:
 
 \beqn
-	h_{t_1,t_2}(\t) &=& \pdv*{\left(\phi_{\X}(\t)\right)}{t_1,t_2}\\
-	&=& \pdv*{\left( e^{i (t_1 + 2t_2) -\half (2t_1^2 - 2 t_2 t_1 + t_2^2)} \right)}{t_1,t_2}\\
-	&=& \pdv*{\left((2i - t_1 + t_2) \cdot \phi_{\X}(\t)\right)}{t_1}\\
-	&=& \phi_{\X}(\t) + (2i - t_1 + t_2) \cdot (i - 2t_1 + t_2) \cdot \phi_{\X}(\t)
+	h_{t_1,t_2}(\t) &=& \pdv*{\bracks{\phi_{\X}(\t)}}{t_1,t_2}\\
+	&=& \pdv*{\bracks{ e^{i (t_1 + 2t_2) -\half \parens{2t_1^2 - 2 t_2 t_1 + t_2^2}} }}{t_1,t_2}\\
+	&=& \pdv*{\bracks{(2i + t_1 - t_2) \cdot \phi_{\X}(\t)}}{t_1}\\
+	&=& \phi_{\X}(\t) + (2i + t_1 - t_2) \cdot (i - 2t_1 + t_2) \cdot \phi_{\X}(\t)
 \eeqn
 
 By property P0, 
